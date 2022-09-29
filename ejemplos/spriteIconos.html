@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprite - Iconos</title>
+    <style>
+        :root{
+            --alto-sprite: 60px;
+            --ancho-sprite:60px;
+        }
+
+        .contenedor{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+
+        .icono{
+            width: 60px;
+            height: 60px;
+            background-image: url(../img/RedesSociales.png);
+            cursor:pointer;
+            transition: all 1s;
+        }
+        #facebook{
+            background-position: 0 0;          
+        }
+        #facebook:hover{
+            background-position: 0 calc(var(--alto-sprite) + 0px);  
+        }
+        #papelera{
+            background-position: calc(var(--ancho-sprite)) 0;
+        }
+        #papelera:hover{
+            background-position: calc(var(--ancho-sprite)) calc(var(--alto-sprite) + 0px);
+        }
+        #gitHub{
+            background-position: calc(var(--ancho-sprite)*2) 0;
+        }
+        #gitHub:hover{
+            background-position: calc(var(--ancho-sprite)*2) calc(var(--alto-sprite) + 0px);
+        }
+
+
+
+ 
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <div id="facebook" class="icono"></div>
+        <div id="papelera" class="icono"></div>
+        <div id="gitHub" class="icono"></div>
+    </div>
+</body>
+</html>

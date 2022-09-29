@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        thead th{
+            padding: 1em;
+        }
+        th, td{
+            border-right: 2px solid white;
+        }
+        td:first-child{
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introducción:</h1>
+    <h2>¿Qué es?</h2>
+    <section>
+        <p>
+            CSS es un lenguaje que usamos para diseñar y maquetar un documento HTML. CSS describe como mostrarse los elementos HTML. CSS
+            es el acrónimo de Hojas(Sheet) de Estilo(Style) en Cascada.
+        </p>
+        <p>
+            Y por que en cascada por que su despliegue se realiza en cascada partiendo de los elementos más globales a lo particular, esto quiere
+            decir que existe una jerarquía a la hora de aplicar estilos, que va de: 
+        </p>
+        <ul>
+            <li>Elementos particulares a los más globales: em>span>p>section>body>html</li>
+            <li>Estilos en linea, estilos en el elemento style, estilos en archivo externo</li>
+        </ul>
+        <p>Este orden o jerarquía se puede romper mediante la palabra !important</p>
+    </section>
+    <h2>Sintaxis:</h2>
+    <p>
+        Se compone de dos elementos principales: Selectores y declaraciones.
+    </p>
+    <p>Los selectores van al principio y se separan mediante coma.</p>
+    <p>
+        Las declaraciones van entre llaves y separadas mediante punto y coma. A su vez, cada declaración se divide en propiedad y valor, estas se separan 
+        mediante dos puntos.
+    </p>
+    <p><img src="img/img_selector.gif" alt="sintaxis básica" title="Sintaxis básica"></p>
+
+    <h2>Declaraciones básicas</h2>
+    <div class="tablaCentrada">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Declaración</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>font-weight:bold</td>
+                    <td>Fuente en negrita</td>
+                </tr>
+                <tr>
+                    <td>font-style:italic</td>
+                    <td>Fuente en cursiva</td>
+                </tr>
+                <tr>
+                    <td>text-align:center</td>
+                    <td>Texto centrado, ver otras variantes</td>
+                </tr>
+                <tr>
+                    <td>margin:10px 12px 15px 14px</td>
+                    <td>Margenes externos</td>
+                </tr>
+                <tr>
+                    <td>padding:10px 12px 15px 14px </td>
+                    <td>Margenes internos</td>
+                </tr>
+                <tr>
+                    <td>border:1px solid black</td>
+                    <td>Borde exterior</td>
+                </tr>
+                <tr>
+                    <td>outline:1px solid black</td>
+                    <td>Borde interno</td>
+                </tr>
+                <tr>
+                    <td>border-radius:15px</td>
+                    <td>Redondeo de bordes</td>
+                </tr>
+                <tr>
+                    <td>width:100%</td>
+                    <td>Ancho del elemento con respecto al padre</td>
+                </tr>
+                <tr>
+                    <td>height:100%</td>
+                    <td>Alto del elemento con respecto al nodo padre</td>
+                </tr>
+                <tr>
+                    <td>display:none</td>
+                    <td>Ocultar elemento, veremos en profundidad todas sus variantes y otras declaraciones que le suelen acompañar</td>
+                </tr>
+                <tr>
+                    <td>position:absolute</td>
+                    <td>posición del elemento, dependerá del atributo position del nodo padre.</td>
+                </tr>
+                <tr>
+                    <td>color:blue</td>
+                    <td>Color de la fuente</td>
+                </tr>
+                <tr>
+                    <td>
+                        background:red<br>
+                        background-color:red
+                    </td>
+                    <td>Color de fondo</td>
+                </tr>
+                <tr>
+                    <td>text-indent:1.5em</td>
+                    <td>Tamaño de la sangria sobre la primera línea</td>
+                </tr>
+                <tr>
+                    <td>content: "Hola Mundo"</td>
+                    <td>Inserta texto en elemento seleccionado, se puede utilizar con los pseudo selectores ::before y ::after</td>
+                </tr>
+                <tr>
+                    <td> font-family: Arial, Helvetica, sans-serif</td>
+                    <td>Fuente del texto</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

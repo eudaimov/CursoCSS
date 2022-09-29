@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Fondos : Background</h1>
+    <p>Se utiliza para agregar efectos de fondo a los elementos. </p>
+    <p>Background es la propiedad abreviada pero se puede dividir en las siguientes:</p>
+    <ul>
+        <li>background-color</li>
+        <li>background-image</li>
+        <li>background-repeat</li>
+        <li>background-attachment</li>
+        <li>background-position</li>
+        <h2>background-blend-mode</h2>
+        <h2>background-clip</h2>
+        <h2>background-origin</h2>
+        <h2>background-size</h2>
+    </ul>
+
+    <h2>Background-color</h2>
+        <p>Se utiliza para agregar color de fondo. Se pueden utilizar varias funciones como es rgba(), rgb(), etc</p>
+        <pre class="codigo">
+        &lt;div style="background-color:dodgerblue; width: 50vw; height:250px; margin: auto 0;"&gt;&lt;/div&gt;</pre>
+        <div style="background-color: dodgerblue; width: 50vw; height:250px; margin: 0 auto;"></div>
+        <p>Se puede hacer incluso degradados, pero con la propiedad <strong>background-image</strong></p>
+        <p>Por ejemplo:</p>
+        <pre class="codigo">
+        &lt;div style="background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); <br>            width: 50vw; height:250px; margin: 0 auto;"&gt;&lt;/div&gt;</pre>
+        <div style="background-image:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); width: 50vw; height:250px; margin: 0 auto;"></div>
+    <h2>background-image</h2>
+    <p>Se utiliza para indicar una imagen de fondo del elemento junto con la función url()</p>
+    <pre class="codigo">
+        &lt;div style="background-image:url("img/nombreArchivo.png"); width: 50vw; height:250px; margin: auto 0;"&gt;&lt;/div&gt;</pre>
+    <div style="background-image: url('img/baldosa.png'); width: 50vw; height:250px; margin: 0 auto;"></div>
+    <pre class="codigo">
+        &lt;div style="background-image:url("img/nombreArchivo.png"); width: 50px; height:50px; margin: auto 0;"&gt;&lt;/div&gt;</pre>
+    <div style="background-image: url('img/baldosa.png'); width: 50px; height:50px; margin: 0 auto;"></div>
+    <h2>background-repeat</h2>
+    <p>Se utiliza si se repite la imagen en el caso de que el marco sea demasiado grande.</p>
+    <p>El valor por defecto es repeat, es decir, que se repite</p>
+    <p>Ejemplos:</p>
+    <pre class="codigo">
+    &lt;div style="background-image:url("img/nombreArchivo.png"); background-repeat:no-repeat ;width: 50vw; height:250px; margin: auto 0;"&gt;&lt;/div&gt;</pre>
+    <div
+        style="background-image: url('img/baldosa.png');background-repeat: no-repeat; width: 50vw; height:250px; margin: 0 auto; border: 1px solid gray;">
+    </div>
+    <pre class="codigo">
+        &lt;div style="background-image:url("img/nombreArchivo.png"); background-repeat:repeat-y;width: 50vw; height:250px; margin: auto 0;"&gt;&lt;/div&gt;</pre>
+    <div
+        style="background-image: url('img/baldosa.png'); background-repeat: repeat-x; width: 50vw; height:250px; margin: 0 auto; border: 1px solid gray;">
+    </div>
+    <h2>background-position</h2>
+    <p>Se Utiliza para indicar la posición de la imagen de fondo con respecto al elemento marco.</p>
+    <p>El valor por defecto de la posición hará que la coordenada 0 en el eje X y la coordenada 0 del eje Y tanto del marco elemento, como la imagen de fondo coincidan</p>
+    <h2>Los valores de background-position</h2>
+    <table>
+        <tr>
+            <td>Valor</td>
+            <td>Descripción</td>
+        </tr>
+        <tr>
+            <td>
+                left top
+                <br>
+                left center
+                <br>
+                left bottom
+                <br>
+                right top
+                <br>
+                right center
+                <br> 
+                right bottom
+                <br>
+                center top
+                <br>
+                center bottom
+                <br>
+                center center
+            </td>
+            <td>Si solo especifica una palabra clave, el otro valor será "centro"</td>
+        </tr>
+        <tr>
+            <td>x% y%</td>
+            <td>El primer valor es la posición horizontal y el segundo valor es la vertical. La esquina superior
+                izquierda es 0% 0%. La esquina inferior derecha es 100% 100%. Si solo especifica un valor, el otro valor
+                será 50%. El valor predeterminado es: 0% 0%
+                </td>
+        </tr>
+        <tr>
+            <td>xpos ypos</td>
+            <td>El primer valor es la posición horizontal y el segundo valor es la vertical. La esquina superior
+                izquierda es 0 0. Las unidades pueden ser píxeles (0px 0px) o cualquier otra unidad CSS. Si solo
+                especifica un valor, el otro valor será 50%. Puedes mezclar % y posiciones</td>
+        </tr>
+        <tr>
+            <td>initial</td>
+            <td>Valor por defecto</td>
+        </tr>
+        <tr>
+            <td>inherit</td>
+            <td>Propiedad heredada del elemento padre.</td>
+        </tr>
+    </table>
+    <p>Ejemplo background-position xpos ypos:</p>
+    <img src="img/RedesSocialesAnimacion.gif" alt="Background position gif explicativo" style="width: 100vw; object-fit:cover; padding-inline:25%">
+    <h2>background-attachment</h2>
+    <h2>bakground-blend-mode</h2>
+    <h2>background-clip</h2>
+    <h2>background-origin</h2>
+    <h2>background-size</h2>
+
+</body>
+
+</html>

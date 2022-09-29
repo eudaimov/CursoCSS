@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #fondo{
+            background-image: url("../img/fondo.png");
+            background-repeat: repeat;
+            background-position: center;
+            width: 90%;
+            height: 450px;
+            background-size: contain;
+            position:relative;
+            overflow: hidden;
+            animation: animacionFondo 40s infinite linear;
+            animation-delay: 3.5s;
+          
+        }
+        #personaje{
+            position:absolute;
+            background-image: url(../img/HombreCaminando.png);
+            transform: translate(-800px);
+            
+            transform:translateY(220px) scale(1.2);
+            background-size: cover;
+            width: 100px;
+            height: 157px;
+            margin: 0 40%;            
+            animation-name: punto, andar;
+            animation-delay: 0s, 0s;
+            animation-duration: 5s, 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear, steps(12);
+        }
+        #personaje:hover{
+            border: 1px solid red;
+            border-radius: 50px;
+        }
+        @keyframes andar {
+            from{background-position: 0 0;}
+            to{background-position: -1200px 0;}
+        }
+        @keyframes punto{
+            0%{
+                transform: translateX(-750px) scale(1.2) translateY(200px);
+            }
+            95%{transform: translateX(950px) scale(1.2) translateY(200px);}
+            100%{transform: translateX(950px) scale(1.2) translateY(200px);}
+        }
+        @keyframes animacionFondo{
+            from{
+                background-position: 0;
+            }
+            to{
+                background-position: -2000px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="fondo">
+        <div id="personaje"></div>
+    </div>    
+</body>
+</html>
