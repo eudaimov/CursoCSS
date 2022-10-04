@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Enlaces</title>
+    <style>
+        .enlace{
+            margin-right: 1em;
+        }
+        .enlace:hover{
+            cursor: pointer;
+        }
+        #enlace1{
+            color:black;
+        }
+        #enlace1:hover{
+            text-decoration: overline underline ;
+        }
+        #enlace2{
+            text-decoration: none;
+            color:green;
+        }
+        #enlace2:hover{
+            text-decoration: underline;
+        }
+        #enlace3{
+
+            text-decoration: none;
+            padding: 1em;
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color:green;
+            outline: 3px solid green;
+        }
+        #enlace3:hover{
+            background-color: green;
+            color:white;
+        }
+        #enlace4{
+            background-color: orangered;
+            color:white;
+            text-decoration: none;
+            padding:1em
+        }
+        #enlace4:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Enlaces / Links</h1>
+<section>
+    <h2>Introducción:</h2>
+    <p>El estilo visual de los enlaces puede ser muy diversos</p>
+    <p style="margin-block: 3em;">
+        <a href="" id="enlace1"  class="enlace" >Enlace 1</a>
+        <a href="" id="enlace2" class="enlace">Enlace 2</a>
+        <a href="" id="enlace3" class="enlace">Enlace 3</a>
+        <a href="" id="enlace4" class="enlace">Enlace 4</a>
+    </p>
+    <p>Puedes aplicar diferentes propiedades como:</p>
+    <ul>
+        <li>text-decoration: underline, none, etc</li>
+        <li>color:/li>
+        <li>background-color:</li>
+        <li>font-family:</li>
+        <li>outline: 1px red solid;</li>
+        <li>border-radius:</li>
+        <li>padding:1em;</li>
+    </ul>
+</section>
+<section>
+    <h2>text-decoration:(text-decoration-line)</h2>
+    <p>Por regla general esta propiedad está establecida en none por defecto. Excepto en un elemento, los enlaces:</p>
+    <a href="">Esto es un enlace</a>
+    <p>En este caso el valor por defecto es underline;</p>
+    <p>Los diferentes valores que puede tomar son:</p>
+    <ul>
+        <li>none: ninguno, valor por defecto de todos los elementos.</li>
+        <li>underline: subrayado. Así se muestran todos los enlaces aunque no es su valor por defecto.</li>
+        <li>overline: subraydo superior.</li>
+        <li>line-through: tachado</li>
+        <li>initial: Valor por defecto, del elemento</li>
+        <li>inherit: Valor del elemento padre</li>
+    </ul>
+    <p>Los valores underline, overline y line-through se puede juntar</p>
+    <p>Ademas de los valores anteriormente (text-decoration-line) descritos puede tomar otros valores de la propiedades,
+    text-decoration-color, text-decoration-style, text-decoration-thickness</p>
+    <h3>text-decoration-color</h3>
+    <p>Es el color que puede tomar la decoración.</p>
+    <h3>text-decoration-style</h3>
+    <p>
+        solid	Es el valor por defecto la linea se muestra como una sola linea
+    </p>
+    <p>
+        double	La "línea" se muestra con doble linea
+    </p>
+    <p>
+        dotted La "linea"se muestra punteada
+    </p>
+    <p>
+        dashed	La "línea" se muestra con una serie de líneas cortas.
+    </p>
+    <p>
+        wavy	La "línea" se muestra con una línea ondulada.
+    </p>
+    <h3>text-decoration-thickness</h3>
+    <p>Define el grosor(altura) de la decoración.</p>
+
+</section>
+
+</body>
+</html>
