@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fuentes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Fuentes</h1>
+<h2>Propiedad font-family:</h2>
+<section>
+    <p>En CSS, usamos la propiedad font-family para especificar la fuente de un texto.</p>
+
+
+    <p>Si el nombre de la fuente es más de una palabra, debe estar entre comillas, como: "Times New Roman".</p>
+
+    <p>La propiedad font-family debe contener varios nombres de fuentes como un sistema "alterno", para garantizar la
+        máxima compatibilidad entre navegadores y sistemas operativos. Comience con la fuente que desee y termine con
+        una familia genérica (para permitir que el navegador elija una fuente similar en la familia genérica, si no hay
+        otras fuentes disponibles). Los nombres de las fuentes deben estar separados por comas.</p>
+    <p>Por ejemplo:</p>
+    <p class="codigo">
+    font-family: "Times New Roman", Times, serif;
+    </p>
+</section>
+<h2>Tipos de Fuente</h2>
+<section>
+    <p>Elegir la fuente correcta tiene un gran impacto en cómo los lectores experimentan un sitio web.</p>
+    <p>La fuente correcta puede crear una fuerte identidad para su marca.</p>
+    <p>Es importante usar una fuente que sea fácil de leer. La fuente agrega valor a su texto. También es importante
+        elegir el color y el tamaño de texto correctos para la fuente.</p>
+    <p>En CSS hay cinco familias de fuentes genéricas:</p>
+    <ul>
+        <li>
+            Las fuentes Serif tienen un pequeño trazo en los bordes de cada letra. Crean una sensación de formalidad y
+            elegancia.
+        </li>
+        <li>
+            Las fuentes sans-serif tienen líneas limpias (sin pequeños trazos adjuntos). Crean un aspecto moderno y
+            minimalista.
+        </li>
+        <li>
+            Fuentes monoespaciadas: aquí todas las letras tienen el mismo ancho fijo. Crean un aspecto mecánico.
+        </li>
+        <li>
+            Las fuentes cursivas imitan la escritura humana.
+        </li>
+        <li>
+            Las fuentes de fantasía son fuentes decorativas/divertidas.
+        </li>
+    </ul>
+    <p>Todos los diferentes nombres de fuentes pertenecen a una de las familias de fuentes genéricas.</p>
+    <p>Diferencias visuales de Sans-serif versus serif</p>
+    <img src="./img/serif.gif" alt="sans-serif vs serif">
+</section>
+
+<h2>Fuentes Seguras</h2>
+<section>
+    <p>Las fuentes web seguras son fuentes que se instalan universalmente en todos los navegadores y dispositivos.</p>
+    <p>No hay fuentes 100% completamente seguras para la web. Siempre existe la posibilidad de que no se encuentre una
+        fuente o no se instale correctamente.</p>
+    <p>Las mejores fuentes web seguras para HTML y CSS son</p>
+    <ul>
+        <li>Arial (sans-serif)</li>
+        <li>Verdana (sans serif)</li>
+        <li>Tahoma (sans serif)</li>
+        <li>Trebuchet MS (sans serif)</li>
+        <li>Times New Roman (serif)</li>
+        <li>Georgia (serif)</li>
+        <li>Garamond (serif)</li>
+        <li>Courier New (monoespaciado)</li>
+        <li>Brush Script MT (cursiva)</li>
+        <li> Papyrus (fantasia)</li>
+    </ul>
+    <p>Antes de publicar su sitio web, siempre verifique cómo aparecen sus fuentes en diferentes navegadores y
+        dispositivos, ¡y siempre use fuentes alternativas !</p>
+</section>
+
+<h2>Importar Fuentes: @font-face</h2>
+<section>
+    <p>los diseñadores web ya no tienen que usar una de las fuentes seguras, para la web.</p>
+    <p> primero debe definir un nombre para la fuente (por ejemplo, myFirstFont) y luego apuntar al archivo de
+        fuente.</p>
+    <p>Para usar la fuente para un elemento HTML, consulte el nombre de la fuente (myFirstFont) a través de la propiedad
+        font-family:</p>
+    <p class="codigo">
+        @font-face {
+        font-family: FuenteFelix;
+        src: url('./../fuentes/HappyMonkey-Regular.ttf');/*Desde la carpeta css*/
+        }
+        .fuenteFelix {
+        font-family: FuenteFelix;
+        }
+    </p>
+    <p class="fuenteFelix">Texto con fuente personalizada</p>
+    <p class="manuscritaFelix">Texto con fuente personalizada</p>
+    <h3>Importación de una fuente con diferentes propiedades</h3>
+    <p>Puedes agrupar en un mismo nombre diversas fuentes que pertenecen a una misma familia pero que tienen propiedades
+        diferentes como es font-weight, font-style o font-stretch</p>
+    <p>Por ejemplo:</p>
+    <p class="codigo">
+        @font-face{
+        font-family: Roboto;
+        src: url("./../fuentes/Roboto-Regular.ttf");
+        }
+        @font-face{
+        font-family: Roboto;
+        src: url("./../fuentes/Roboto-Italic.ttf");
+        font-style:italic
+        }
+        .roboto{
+        font-family: Roboto;
+        }
+        .robotoCursiva{
+        font-family:Roboto;
+        font-style:italic;
+        }
+
+        ...etc para el resto de los 12 archivos que comprende la familia Roboto.
+
+    </p>
+</section>
+<section>
+    <p>Ademas de la forma que acabos de ver podemos importar fuentes externas de forma directa.</p>
+    <p>Se puede utilizar Google Fonts.</p>
+    <p> Google Fonts es de uso gratuito y tiene más de 1000 fuentes para elegir.</p>
+    <p class="codigo">
+        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
+        &lt;style&gt;
+            body {
+                font-family: "Sofia", sans-serif;
+            }
+    </p>
+    <p>Para usar varias fuentes de Google, simplemente separe los nombres de las fuentes con un carácter de barra vertical ( |)</p>
+
+</section>
+<h2>Normas para la utilización y combinación de Fuentes.</h2>
+<section>
+
+
+    <h3>1. Complemento</h3>
+    <p>Siempre es seguro encontrar combinaciones de fuentes que se complementen entre sí.</p>
+
+    <p>Una gran combinación de fuentes debe armonizar, sin ser demasiado similar o demasiado diferente.</p>
+
+    <h3>2. Usa superfamilias de fuentes</h3>
+    <p>Una superfamilia de fuentes es un conjunto de fuentes diseñadas para funcionar bien juntas. Por lo tanto, usar
+        diferentes fuentes dentro de la misma superfamilia es seguro.</p>
+
+    <p>Por ejemplo, la superfamilia Lucida contiene las siguientes fuentes: Lucida Sans, Lucida Serif, Lucida Typewriter
+        Sans, Lucida Typewriter Serif y Lucida Math.</p>
+
+    <h3>3. El contraste es el rey</h3>
+    <p>Dos fuentes que son demasiado similares a menudo entran en conflicto. Sin embargo, los contrastes, hechos de la
+        manera correcta, sacan lo mejor de cada fuente.</p>
+
+    <p>Ejemplo: Combinar serif con sans serif es una combinación bien conocida.</p>
+
+    <p>Una superfamilia fuerte incluye variaciones serif y sans serif de la misma fuente (por ejemplo, Lucida y Lucida
+        Sans).</p>
+
+    <h3>4. Elija solo un jefe</h3>
+    <p>Una fuente debe ser el jefe. Esto establece una jerarquía para las fuentes en su página. Esto se puede lograr
+        variando el tamaño, el peso y el color.</p>
+</section>
+
+<h2>Estilo de fuente</h2>
+<section>
+    <h3>font-weight</h3>
+    <p>Se realizapara determinar el grosor de la fuente, frecuentemente en negrita</p>
+    <p>Los valores más utilizados son <strong>bold</strong>, aunque se pueden poner otros valores como:</p>
+    <ul>
+        <li>normal; (valor por defecto)</li>
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+        <li>600</li>
+        <li>900</li>
+        <li>lighter: trazado más fino posible.</li>
+        <li>bolder: trazado más grueso</li>
+    </ul>
+    <p class="codigo">
+        font-weight:bold;
+    </p>
+    <h3>font-variant:</h3>
+    <p>Determina variante de estilos como son versalitas </p>
+    <p class="codigo">
+        font-variant:small-caps
+    </p>
+    <p>Dentro de la propiedad font-variant conviene también mirarse el uso de:
+    </p>
+    <ul>
+        <li>font-variant-alternates</li>
+        <li>font-variant-caps</li>
+        <li>font-variant-ligatures</li>
+        <li>font-variant-numeric.</li>
+        <li>font-variant-position</li>
+        <li>font-variant-east-asian</li>
+    </ul>
+    <h3>
+        font-style
+    </h3>
+    <p>Esta propiedad es usado para utilizar fuentes en cursiva.</p>
+    <p class="codigo">font-style:italic;</p>
+    <p>Existen otras variantes como oblique</p>
+    <h3>font-strech</h3>
+    <p>Propiedad le permite hacer que el texto sea más estrecho (condensado) o más ancho (expandido).</p>
+    <p class="codigo">
+        text-strech:expanded;
+        text-strech:condensed;
+    </p>
+    <p>Existen muchos otros como: semi-expanded, extra-expanded,ultra-expanded, semi-condensed, extra-condensed, ultra-condensed</p>
+    <h3>Tamaño de la fuente</h3>
+    <p>font-size:2em;</p>
+    <p>Determina en tamaño de la fuente en muy diversos tipos de unidades em, rem, pto, px, como tipos predefinidos de tamaño:</p>
+    <ul>
+        <li>xx-small</li>
+        <li>x-small</li>
+        <li>small</li>
+        <li>medium</li>
+        <li>large</li>
+        <li>x-large</li>
+        <li>xx-large</li>
+        <li>smaler </li>
+        <li>larger</li>
+    </ul>
+    <h3>font-size-adjust</h3>
+    <p>La propiedad le brinda un mejor control del tamaño de la fuente cuando la primera fuente
+        seleccionada no está disponible.</p>
+    <p>Cuando una fuente no está disponible, el navegador usa la segunda fuente especificada. Esto podría resultar en un
+        gran cambio para el tamaño de fuente. Para evitar esto, utilice la font-size-adjustpropiedad.</p>
+    <p> Todas las fuentes tienen un "valor de aspecto" que es la diferencia de tamaño entre la letra minúscula "x" y la
+        letra mayúscula "X".</p>
+    <p>Cuando el navegador conoce el "valor de aspecto" para la primera fuente seleccionada, el navegador puede
+        averiguar qué tamaño de fuente usar cuando se muestra el texto con la fuente de la segunda opción.</p>
+</section>
+
+
+
+
+</body>
+</html>

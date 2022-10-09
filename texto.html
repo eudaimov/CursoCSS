@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Estilo de texto</title>
+    <style>
+        .cajaWhiteSpace p {
+            width: 300px;
+            border: 1px dotted orangered;
+            margin: auto;
+            padding: 1em;
+        }
+
+        .cajaWhiteSpace p:nth-child(1) {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .cajaWhiteSpace p:nth-child(2) {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+<h1>Estilo de texto</h1>
+<p>CSS tiene muchísimas propiedades para dar estilo que queramos a nuestro texto.</p>
+<section>
+    <h2>Color del texto:</h2>
+    <p>color: green;</p>
+    <p>color: rgb( 0, 255, 0)</p>
+    <p>color: #00FF00</p>
+    <p>color: hsl(120, 100%, 50%) </p>
+    <p> También se puede utilizar rgba y hsla, la a hace referencia al canal alfa o de transparencia, los valores van
+        del
+        0.0 al 1.0</p>
+    <p>El valor por defecto para todo el documento se define en el elemento body</p>
+</section>
+<section>
+    <h2>Color de fondo</h2>
+    <p>background-color: green</p>
+    <p>Puedes utilizar los mismos métodos que utilizamos en color</p>
+    <p>Importante: El alto contraste es muy importante para las personas con problemas de visión. Por lo tanto,
+        asegúrese
+        siempre de que el contraste entre el color del texto y el color de fondo (o la imagen de fondo) sea bueno.</p>
+</section>
+<section>
+    <h2>Alineación del párrafo:</h2>
+    <ul>
+        <li>text-align: center;</li>
+        <li>text-align: right;</li>
+        <li>text-align:left;</li>
+        <li>text-align: justify</li>
+    </ul>
+</section>
+<section>
+    <h2>Alineación de la última línea de un párrafo</h2>
+    <ul>
+        <li>text-align-last:left (valor por defecto)</li>
+        <li>text-align-last:justify</li>
+        <li>text-align-last:right</li>
+        <li>text-align-last:center (empleado a menudo para poesías)</li>
+    </ul>
+</section>
+<section>
+    <h2>text-decoration:(text-decoration-line)</h2>
+    <p>Por regla general esta propiedad está establecida en none por defecto. Excepto en un elemento, los enlaces:</p>
+    <a href="">Esto es un enlace</a>
+    <p>En este caso el valor por defecto es underline;</p>
+    <p>Los diferentes valores que puede tomar son:</p>
+    <ul>
+        <li>none: ninguno, valor por defecto de todos los elementos.</li>
+        <li>underline: subrayado. Así se muestran todos los enlaces aunque no es su valor por defecto.</li>
+        <li>overline: subrayado superior.</li>
+        <li>line-through: tachado</li>
+        <li>initial: Valor por defecto, del elemento</li>
+        <li>inherit: Valor del elemento padre</li>
+    </ul>
+    <p>Los valores underline, overline y line-through se puede juntar</p>
+    <p>Ademas de los valores anteriormente (text-decoration-line) descritos puede tomar otros valores de la propiedades,
+        text-decoration-color, text-decoration-style, text-decoration-thickness</p>
+    <h3>text-decoration-color</h3>
+    <p>Es el color que puede tomar la decoración.</p>
+    <h3>text-decoration-style</h3>
+    <ul>
+        <li>solid Es el valor por defecto la línea se muestra como una sola línea.</li>
+        <li>double La "línea" se muestra con doble línea.</li>
+        <li>dotted La "linea"se muestra punteada.</li>
+        <li>dashed La "línea" se muestra con una serie de líneas cortas.</li>
+        <li>wavy La "línea" se muestra con una línea ondulada.</li>
+    </ul>
+    <h3>text-decoration-thickness</h3>
+    <p>Define el grosor(altura) de la decoración.</p>
+</section>
+<section>
+    <h2>Text-transform</h2>
+    <p>Sirve para especificar si el texto va todo en mayúsculas, minúsculas, cada palabra la primera en mayúscula.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>Declaracion</th>
+            <th>Explicación</th>
+        </tr>
+        </thead>
+        <tr>
+            <td>text-transform:uppercase</td>
+            <td>Mayúsculas</td>
+        </tr>
+        <tr>
+            <td>text-transform:lowercase</td>
+            <td>Minúsculas</td>
+        </tr>
+        <tr>
+            <td>text-transform:capitalize</td>
+            <td>Mayúsculas la primera letra de cada palabra.</td>
+        </tr>
+        <tr>
+            <td>text-transform:none (valor por defecto)</td>
+            <td>Tal cual esta</td>
+        </tr>
+        <tr>
+            <td>text-transform:initial</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>text-transform:inherit</td>
+            <td>Heredado del nodo padre</td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>Espaciado del texto</h2>
+    <table>
+        <thead>
+        <tr>
+            <td>Declaración</td>
+            <td>Explicación</td>
+        </tr>
+        </thead>
+        <tr>
+            <td>text-indent</td>
+            <td>Sangría de la primera línea</td>
+        </tr>
+        <tr>
+            <td>letter-spacing:5px</td>
+            <td>Espacio entre caracteres.</td>
+        </tr>
+        <tr>
+            <td>line-height:1em</td>
+            <td>Interlineado</td>
+        </tr>
+        <tr>
+            <td>word-spacing:1em</td>
+            <td>Espacio entre palabras</td>
+        </tr>
+        <tr>
+            <td>white-space: normal, pre , nowrap</td>
+            <td>Como se produce el salto de línea. Normal, como tienes el código o sin salto de línea.</td>
+        </tr>
+    </table>
+    <p>Ejemplo white-space</p>
+    <div class="cajaWhiteSpace">
+
+        <p>wrap: Lorem ipsum (overflow:hidden)dolor sit amet, consectetur adipisicing elit. Ab aliquam beatae
+            dignissimos dolorum esse
+            exercitationem hic, illo incidunt magnam molestiae omnis optio perferendis quasi quos ratione sit tempora
+            velit vero?</p>
+        <p>pre: Lorem ipsum dolor sit amet,consectetur adipisicing elit.
+            Aperiam asperiores at consequuntur
+            corporis culpa
+            deleniti dolorem eius eos ipsam
+            mollitia, nemo quia rem
+            rerum tenetur veniam! Expedita
+            molestias omnis repellendus? </p>
+        <p>normal: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi eligendi enim officia placeat
+            tempora.
+            Consequuntur cupiditate deleniti, excepturi id inventore laboriosam quo recusandae reiciendis tempora. Alias
+            dignissimos id soluta vitae. </p>
+    </div>
+</section>
+<section>
+    <h2>Sombra de Texto: text-shadow</h2>
+    <p>Ejemplo:</p>
+    <p class="codigo">text-shadow: 2px 2px 10px red;</p>
+    <p>Explicación:</p>
+    <p>El primer valor determina la dirección y longitud horizontal de la sombra. Puede ser negativo</p>
+    <p style="text-shadow: -10px 0px deepskyblue">Text Shadow</p>
+    <p class="codigo">text-shadow: -10px 0px deepskyblue;</p>
+    <p style="text-shadow: 10px 0px deepskyblue">Text Shadow</p>
+    <p class="codigo">text-shadow: 10px 0px deepskyblue;</p>
+    <p>El segundo valor determina la direccion y longitud vertical de la sombra. También puede ser negativa</p>
+    <p style="text-shadow: 0 -10px deepskyblue">Text Shadow</p>
+    <p class="codigo">text-shadow: 0 -10px deepskyblue;</p>
+    <p style="text-shadow: 0 10px deepskyblue">Text Shadow</p>
+    <p class="codigo">text-shadow: 0 10px deepskyblue;</p>
+    <p>El terce valor difumina el trazado el tamaño que determines.</p>
+    <p style="text-shadow: 10px -10px 10px deepskyblue">Text Shadow</p>
+    <p class="codigo">text-shadow: 10px 10px 10pxdeepskyblue;</p>
+    <p>Por último, cabe decir que su pueden añadir y combinar varios efectos de sombra y que la capa superior es la
+        primera
+        que escribre</p>
+    <p class="codigo">text-shadow: 10px -10px white, 15px -15px 15px red</p>
+    <p style="text-shadow:  10px -10px  whitesmoke, 15px -15px 15px red;
+    font-size: 30px; text-align: center; font-weight: bold">Text Shadow</p>
+
+</section>
+
+<section>
+    <h2>Otros efectos sobre el texto</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Declaración</th>
+            <th>Explicacion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>text-overflow: clipped, ellipsis, "string"</td>
+            <td>La manera de ocultar el texto,cuando la propiedad overflow esta en oculto.<br>El string solo funciona en
+                firefox
+            </td>
+        </tr>
+        <tr>
+            <td>word-wrap: break-word, normal</td>
+            <td>Como se rompen las palabras largas en los saltos de línea. No tienen en consideración la ruptura
+                ortográfica.
+            </td>
+        </tr>
+        <tr>
+            <td>word-break: break-all,</td>
+            <td>Como se rompen las palabras.</td>
+        </tr>
+        <tr>
+            <td>hyphens: auto, none, manual</td>
+            <td>Especifica cómo deben dividirse las palabras cuando el texto se ajusta a través de múltiples líneas.
+                Puede impedir la separación de sílabas por completo, usar guiones manualmente en puntos específicos del
+                texto o dejar que el navegador inserte los guiones automáticamente donde corresponda.<br>
+                Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el
+                atributo lang y los navegadores separarán únicamente si este atributo está presente y si existe un
+                diccionario de separación silábica adecuado.
+                En modo manual se utiliza  &hyphen; or &shy;
+            </td>
+        </tr>
+        <tr>
+            <td>writing-mode: horizontal-tb, vertical-rl, vertical-lr</td>
+            <td>Orientación del texto</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

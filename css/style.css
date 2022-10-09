@@ -1,3 +1,12 @@
+@font-face {
+    font-family: FuenteFelix;
+    src: url('./../fuentes/HappyMonkey-Regular.ttf');
+}
+@font-face{
+    font-family: ManuscritaFelix;
+    src: url("./../fuentes/ComforterBrush-Regular.ttf");
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -6,6 +15,7 @@
 .codigo{
     background-color: rgb(191, 211, 248);
     font-family: 'Courier New', Courier, monospace;
+    white-space: pre;
 
     margin:1em 2em;
     padding-inline: 2em;
@@ -63,4 +73,11 @@ td{
 a{
     text-decoration: none;
     color:black;
+}
+.fuenteFelix{
+    font-family: FuenteFelix;
+}
+.manuscritaFelix{
+    font-family: ManuscritaFelix;
+    font-size:2rem;
 }
