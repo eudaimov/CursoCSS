@@ -6,6 +6,31 @@
     font-family: ManuscritaFelix;
     src: url("./../fuentes/ComforterBrush-Regular.ttf");
 }
+@font-face {
+    font-family: Roboto;
+    src: url("./../fuentes/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: Roboto;
+    src: url("./../fuentes/Roboto-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: url("./../fuentes/Roboto-Light.ttf");
+
+}
+@font-face {
+    font-family: Nunito;
+    src:url("./../fuentes/Nunito-Black.ttf");
+}
+body{
+    font-family: 'Roboto Light', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Nunito', serif;
+    margin-left: 1em;
+}
 
 *{
     margin: 0;
@@ -15,17 +40,18 @@
 .codigo{
     background-color: rgb(191, 211, 248);
     font-family: 'Courier New', Courier, monospace;
-    white-space: pre;
-
     margin:1em 2em;
     padding-inline: 2em;
     padding-block: 1em;
-}
-body{
-    margin: 3em;
+    white-space: break-spaces;
 }
 p{
     margin-bottom: 10px;
+    margin-left: 2.5em;
+}
+li{
+    margin-bottom: 10px;
+    margin-left: 3.5em;
 }
 footer{
     margin-top: 20px;
@@ -33,14 +59,7 @@ footer{
 .centrado{
     text-align: center;
 }
-@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Roboto:wght@100&display=swap');
-p, li{
-    font-family:'Roboto', sans-serif;
-}
-li{
-    margin-left: 1em;
-    margin-block: 1em;
-}
+
 h1,h2,h3,h4,h5,h6{
     margin-block: 1em;
 }
@@ -57,10 +76,15 @@ thead tr:nth-child(1){
     font-weight: bold;
     color:white;
     /* font-variant: small-caps; */
-    font-size: 20pt;
+    font-size: 16pt;
 }
 table,tr,td{
     border-collapse: collapse;
+}
+th{
+    padding: 1em 0;
+    text-align: start;
+    text-indent: 1em;
 }
 td{
     padding:1em;
@@ -68,7 +92,7 @@ td{
 .tablaCentrada{
     display: flex;
     justify-content: center;
-    width: 100%;
+    padding: 2em;
 }
 a{
     text-decoration: none;
@@ -80,4 +104,9 @@ a{
 .manuscritaFelix{
     font-family: ManuscritaFelix;
     font-size:2rem;
+}
+@media screen and (min-width: 1050px) {
+    .codigo{
+        white-space: pre-wrap;
+    }
 }

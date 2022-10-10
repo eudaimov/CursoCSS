@@ -87,13 +87,13 @@
     <p>Para usar la fuente para un elemento HTML, consulte el nombre de la fuente (myFirstFont) a través de la propiedad
         font-family:</p>
     <p class="codigo">
-        @font-face {
-        font-family: FuenteFelix;
-        src: url('./../fuentes/HappyMonkey-Regular.ttf');/*Desde la carpeta css*/
-        }
-        .fuenteFelix {
-        font-family: FuenteFelix;
-        }
+@font-face {
+    font-family: FuenteFelix;
+    src: url('./../fuentes/HappyMonkey-Regular.ttf');/*Desde la carpeta css*/
+}
+.fuenteFelix {
+    font-family: FuenteFelix;
+}
     </p>
     <p class="fuenteFelix">Texto con fuente personalizada</p>
     <p class="manuscritaFelix">Texto con fuente personalizada</p>
@@ -102,25 +102,23 @@
         diferentes como es font-weight, font-style o font-stretch</p>
     <p>Por ejemplo:</p>
     <p class="codigo">
-        @font-face{
-        font-family: Roboto;
-        src: url("./../fuentes/Roboto-Regular.ttf");
-        }
-        @font-face{
-        font-family: Roboto;
-        src: url("./../fuentes/Roboto-Italic.ttf");
-        font-style:italic
-        }
-        .roboto{
-        font-family: Roboto;
-        }
-        .robotoCursiva{
-        font-family:Roboto;
-        font-style:italic;
-        }
-
-        ...etc para el resto de los 12 archivos que comprende la familia Roboto.
-
+@font-face{
+    font-family: Roboto;
+    src: url("./../fuentes/Roboto-Regular.ttf");
+}
+@font-face{
+    font-family: Roboto;
+    src: url("./../fuentes/Roboto-Italic.ttf");
+    font-style:italic
+}
+.roboto{
+    font-family: Roboto;
+}
+.robotoCursiva{
+    font-family:Roboto;
+    font-style:italic;
+}
+...etc para el resto de los 12 archivos que comprende la familia Roboto.
     </p>
 </section>
 <section>
@@ -128,11 +126,12 @@
     <p>Se puede utilizar Google Fonts.</p>
     <p> Google Fonts es de uso gratuito y tiene más de 1000 fuentes para elegir.</p>
     <p class="codigo">
-        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
-        &lt;style&gt;
-            body {
-                font-family: "Sofia", sans-serif;
-            }
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"&gt;
+&lt;style&gt;
+    body {
+        font-family: "Sofia", sans-serif;
+    }
+&lt;/style&gt;
     </p>
     <p>Para usar varias fuentes de Google, simplemente separe los nombres de las fuentes con un carácter de barra vertical ( |)</p>
 
@@ -183,12 +182,12 @@
         <li>bolder: trazado más grueso</li>
     </ul>
     <p class="codigo">
-        font-weight:bold;
+font-weight:bold;
     </p>
     <h3>font-variant:</h3>
     <p>Determina variante de estilos como son versalitas </p>
     <p class="codigo">
-        font-variant:small-caps
+font-variant:small-caps
     </p>
     <p>Dentro de la propiedad font-variant conviene también mirarse el uso de:
     </p>
@@ -209,8 +208,8 @@
     <h3>font-strech</h3>
     <p>Propiedad le permite hacer que el texto sea más estrecho (condensado) o más ancho (expandido).</p>
     <p class="codigo">
-        text-strech:expanded;
-        text-strech:condensed;
+text-strech:expanded;
+text-strech:condensed;
     </p>
     <p>Existen muchos otros como: semi-expanded, extra-expanded,ultra-expanded, semi-condensed, extra-condensed, ultra-condensed</p>
     <h3>Tamaño de la fuente</h3>

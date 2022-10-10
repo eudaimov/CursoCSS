@@ -20,9 +20,9 @@
         <ul>
             <li>Selectores simples.</li>
             <li>Selectores combinados.</li>
-            <li>Selectores de pseudo-clases.</li>
-            <li>Pseudo elementos selectores.</li>
-            <li>Selector de atributos.</li>
+            <li>Pseudo selectores de estado.</li>
+            <li>Pseudo selectores de partes.</li>
+            <li>Selectores de atributos.</li>
         </ul>
     </section>
     <h2>Selectores simples</h2>
@@ -30,30 +30,30 @@
         <ul>
             <li>Selector de elemento simple</li>
             <p class="codigo">
-                p {font-size:12pt;} <br>
-                h1 {font-size: 16pt;} <br>
-                h2 {font-size: 14pt;}</p>
+p {font-size:12pt;} <br>
+h1 {font-size: 16pt;} <br>
+h2 {font-size: 14pt;}</p>
             <li>Selector de clase</li>
             <p class="codigo">
-                .margin1em {margin-bottom:1em;} <br>
-                .negrita {font-weight: bold;}
+.margin1em {margin-bottom:1em;} <br>
+.negrita {font-weight: bold;}
             </p>
             <li>Selector especifico de elemento+clase</li>
             <p class="codigo">
-                p.textoAlineadoCentro{ text-align:center};
-                p.oculto {display:none;}
+p.textoAlineadoCentro{ text-align:center};
+p.oculto {display:none;}
             </p>
             <li>Selector de identificador único</li>
             <p class="codigo">
-                div#principal {border: 2px solid black};
+div#principal {border: 2px solid black};
             </p>
             <li>Selector de grupos</li>
             <p class="codigo">
-                p, h1, h2{color: gray}
+p, h1, h2{color: gray}
             </p>
             <li>Selector universal</li>
             <p class="codigo">
-                *{box-sizing: border-box}
+*{box-sizing: border-box}
             </p>
         </ul>
     </section>
@@ -74,7 +74,7 @@
             </p>
         </ul>
     </section>
-    <h2>Selector de pseudo-clases</h2>
+    <h2>Pseudo selectores de estados :</h2>
     <section>
         <p>
             Se utiliza para definir el estilo de un elemento mientras se encuentra
@@ -112,161 +112,163 @@
                         <td>Selecciona los links activos</td>
                     </tr>
                     <tr>
-                    <td>:checked</td>
-                    <td>input:checked</td>
-                    <td>Selecciona cada elemento &lt;input&gt; checked </td>
+                        <td>:checked</td>
+                        <td>input:checked</td>
+                        <td>Selecciona cada elemento &lt;input&gt; checked </td>
                     </tr>
                     <tr>
-                    <td>:disabled</td>
-                    <td>input:disabled</td>
-                    <td>Selecciona cada elemento &lt;input&gt; disabled</td>
+                        <td>:disabled</td>
+                        <td>input:disabled</td>
+                        <td>Selecciona cada elemento &lt;input&gt; disabled</td>
                     </tr>
                     <tr>
-                    <td>:empty</td>
-                    <td>p:empty</td>
-                    <td>Selecciona cada elemento &lt;p&gt; que no tenga hijos</td>
+                        <td>:empty</td>
+                        <td>p:empty</td>
+                        <td>Selecciona cada elemento &lt;p&gt; que no tenga hijos</td>
                     </tr>
                     <tr>
-                    <td>:enabled</td>
-                    <td>input:enabled</td>
-                    <td>Selecciona cada elemento &lt;input&gt; enabled</td>
+                        <td>:enabled</td>
+                        <td>input:enabled</td>
+                        <td>Selecciona cada elemento &lt;input&gt; enabled</td>
                     </tr>
                     <tr>
-                    <td>:first-child</td>
-                    <td>p:first-child</td>
-                    <td>Selecciona el primer nodo que se encuentre dentro de cada elemento &lt;p&gt; </td>
+                        <td>:first-child</td>
+                        <td>p:first-child</td>
+                        <td>Selecciona el primer nodo que se encuentre dentro de cada elemento &lt;p&gt; </td>
                     </tr>
                     <tr>
-                    <td>:first-of-type</td>
-                    <td>p:first-of-type</td>
-                    <td>Selecciona cada elemento &lt;p&gt; que sea el primer descendiente de su nodo raíz</td>
+                        <td>:first-of-type</td>
+                        <td>p:first-of-type</td>
+                        <td>Selecciona cada elemento &lt;p&gt; que sea el primer descendiente de su nodo raíz</td>
                     </tr>
                     <tr>
-                    <td>:focus</td>
-                    <td>input:focus</td>
-                    <td>Selecciona los elementos &lt;input&gt; los cuales posean el focus</td>
+                        <td>:focus</td>
+                        <td>input:focus</td>
+                        <td>Selecciona los elementos &lt;input&gt; los cuales posean el focus</td>
                     </tr>
                     <tr>
-                    <td>:hover</td>
-                    <td>a:hover</td>
-                    <td>Selecciona los links sobre los que se encuentre el ratón.</td>
+                        <td>:hover</td>
+                        <td>a:hover</td>
+                        <td>Selecciona los links sobre los que se encuentre el ratón.</td>
                     </tr>
                     <tr>
-                    <td>.asp">:in-range</a></td>
-                    <td>input:in-range</td>
-                    <td>Selects &lt;input&gt; elements with a value within a specified range</td>
+                        <td>.asp">:in-range</a></td>
+                        <td>input:in-range</td>
+                        <td>Selects &lt;input&gt; elements with a value within a specified range</td>
                     </tr>
                     <tr>
-                    <td>:invalid</td>
-                    <td>input:invalid</td>
-                    <td>Selects all &lt;input&gt; elements with an invalid value</td>
+                        <td>:invalid</td>
+                        <td>input:invalid</td>
+                        <td>Selects all &lt;input&gt; elements with an invalid value</td>
                     </tr>
                     <tr>
-                    <td>:lang(<i>language</i>)</td>
-                    <td>p:lang(it)</td>
-                    <td>Selects every &lt;p&gt; element with a lang attribute value starting with "it"</td>
+                        <td>:lang(<i>language</i>)</td>
+                        <td>p:lang(it)</td>
+                        <td>Selects every &lt;p&gt; element with a lang attribute value starting with "it"</td>
                     </tr>
                     <tr>
-                    <td>:last-child</td>
-                    <td>p:last-child</td>
-                    <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
+                        <td>:last-child</td>
+                        <td>p:last-child</td>
+                        <td>Selects every &lt;p&gt; elements that is the last child of its parent</td>
                     </tr>
                     <tr>
-                    <td>:last-of-type</td>
-                    <td>p:last-of-type</td>
-                    <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
+                        <td>:last-of-type</td>
+                        <td>p:last-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the last &lt;p&gt; element of its parent</td>
                     </tr>
                     <tr>
-                    <td>:link</td>
-                    <td>a:link</td>
-                    <td>Selects all unvisited links</td>
+                        <td>:link</td>
+                        <td>a:link</td>
+                        <td>Selects all unvisited links</td>
                     </tr>
                     <tr>
-                    <td>:not(selector)</td>
-                    <td>:not(p)</td>
-                    <td>Selects every element that is not a &lt;p&gt; element</td>
+                        <td>:not(selector)</td>
+                        <td>:not(p)</td>
+                        <td>Selects every element that is not a &lt;p&gt; element</td>
                     </tr>
                     <tr>
-                    <td>:nth-child(n)</td>
-                    <td>p:nth-child(2)</td>
-                    <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
+                        <td>:nth-child(n)</td>
+                        <td>p:nth-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent</td>
                     </tr>
                     <tr>
-                    <td>:nth-last-child(n)</td>
-                    <td>p:nth-last-child(2)</td>
-                    <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
+                        <td>:nth-last-child(n)</td>
+                        <td>p:nth-last-child(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second child of its parent, counting from the last child</td>
                     </tr>
                     <tr>
-                    <td>:nth-last-of-type(n)</td>
-                    <td>p:nth-last-of-type(2)</td>
-                    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
+                        <td>:nth-last-of-type(n)</td>
+                        <td>p:nth-last-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent, counting from the last child</td>
                     </tr>
                     <tr>
-                    <td>:nth-of-type(n)</td>
-                    <td>p:nth-of-type(2)</td>
-                    <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
+                        <td>:nth-of-type(n)</td>
+                        <td>p:nth-of-type(2)</td>
+                        <td>Selects every &lt;p&gt; element that is the second &lt;p&gt; element of its parent</td>
                     </tr>
                     <tr>
-                    <td>:only-of-type</td>
-                    <td>p:only-of-type</td>
-                    <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
+                        <td>:only-of-type</td>
+                        <td>p:only-of-type</td>
+                        <td>Selects every &lt;p&gt; element that is the only &lt;p&gt; element of its parent</td>
                     </tr>
                     <tr>
-                    <td>:only-child</td>
-                    <td>p:only-child</td>
-                    <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
+                        <td>:only-child</td>
+                        <td>p:only-child</td>
+                        <td>Selects every &lt;p&gt; element that is the only child of its parent</td>
                     </tr>
                     <tr>
-                    <td>:optional</td>
-                    <td>input:optional</td>
-                    <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+                        <td>:optional</td>
+                        <td>input:optional</td>
+                        <td>Selects &lt;input&gt; elements with no "required" attribute</td>
                     </tr>
                     <tr>
-                    <td>:out-of-range</td>
-                    <td>input:out-of-range</td>
-                    <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
+                        <td>:out-of-range</td>
+                        <td>input:out-of-range</td>
+                        <td>Selects &lt;input&gt; elements with a value outside a specified range</td>
                     </tr>
                     <tr>
-                    <td>:read-only</td>
-                    <td>input:read-only</td>
-                    <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
+                        <td>:read-only</td>
+                        <td>input:read-only</td>
+                        <td>Selects &lt;input&gt; elements with a "readonly" attribute specified</td>
                     </tr>
                     <tr>
-                    <td>:read-write</td>
-                    <td>input:read-write</td>
-                    <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+                        <td>:read-write</td>
+                        <td>input:read-write</td>
+                        <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
                     </tr>
                     <tr>
-                    <td>:required</td>
-                    <td>input:required</td>
-                    <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
+                        <td>:required</td>
+                        <td>input:required</td>
+                        <td>Selects &lt;input&gt; elements with a "required" attribute specified</td>
                     </tr>
                     <tr>
-                    <td>:root</td>
-                    <td>root</td>
-                    <td>Selects the document's root element</td>
+                        <td>:root</td>
+                        <td>root</td>
+                        <td>Selects the document's root element</td>
                     </tr>
                     <tr>
-                    <td>:target</td>
-                    <td>#news:target</td>
-                    <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+                        <td>:target</td>
+                        <td>#news:target</td>
+                        <td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
                     </tr>
                     <tr>
-                    <td>:valid</td>
-                    <td>input:valid</td>
-                    <td>Selects all &lt;input&gt; elements with a valid value</td>
+                        <td>:valid</td>
+                        <td>input:valid</td>
+                        <td>Selects all &lt;input&gt; elements with a valid value</td>
                     </tr>
                     <tr>
-                    <td>:visited</td>
-                    <td>a:visited</td>
-                    <td>Selecciona todos los enlaces visitados</td>
+                        <td>:visited</td>
+                        <td>a:visited</td>
+                        <td>Selecciona todos los enlaces visitados</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
+            <p>odd: para elementos impares, even: para elementos pares</p>
 
-        <h2>Selector de pseudo-Elementos</h2>
+
+        <h2>Pseudo selectores de partes ::</h2>
         <p>
             Un pseudo-elemento CSS se usa para diseñar partes específicas de un
             elemento.
