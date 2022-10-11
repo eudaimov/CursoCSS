@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elementos flotantes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Elementos flotantes: Float & clear</h1>
+<h2>Introducción</h2>
+<section>
+    <p>La propiedad float especifica cómo debe flotar un elemento.</p>
+    <p>La propiedad clear especifica cómo debe flotar un elemento cuando ya existe otro que flota.</p>
+</section>
+<h2>Float</h2>
+<section>
+    <p>Puede tener los siguientes valores:</p>
+    <ul>
+        <li>right</li>
+        <li>left</li>
+        <li>none</li>
+    </ul>
+    <p>Ejemplo:</p>
+    <p style="padding-right: 2em"><img src="./img/baldosa.png" width="300" height="100" alt="" style="float:right">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ratione rerum. Ab architecto consectetur
+        consequuntur fuga, fugit ipsa magnam modi molestiae placeat, quis quod ratione tenetur velit. Eligendi
+        necessitatibus, officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloribus eligendi
+        exercitationem iusto natus nostrum omnis, recusandae reprehenderit temporibus! Adipisci corporis cumque eveniet
+        inventore, maiores officia provident? Accusamus amet at cum dolor dolore, eaque fuga minima minus optio
+        reiciendis sapiente sed sunt temporibus? Delectus dolore et magni quibusdam, recusandae vero?
+    </p>
+    <p class="codigo">
+    &lt;p style="padding-right: 2em">
+        &lt;img src="./img/baldosa.png" width="300" height="100" alt="" style="float:right">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, ratione rerum. Ab architecto consectetur
+        consequuntur fuga, fugit ipsa magnam modi molestiae placeat, quis quod ratione tenetur velit. Eligendi
+        necessitatibus, officiis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloribus eligendi
+        exercitationem iusto natus nostrum omnis, recusandae reprehenderit temporibus! Adipisci corporis cumque eveniet
+        inventore, maiores officia provident? Accusamus amet at cum dolor dolore, eaque fuga minima minus optio
+        reiciendis sapiente sed sunt temporibus? Delectus dolore et magni quibusdam, recusandae vero?
+    &lt;/p>
+    </p>
+</section>
+<h2>Clear:</h2>
+<section>
+    <p>La propiedad clear especifica lo que debería suceder con el elemento que está al lado de un elemento
+        flotante.</p>
+
+    <p>La propiedad clear puede tener uno de los siguientes valores:</p>
+    <ul>
+        <li>
+            none- El elemento no se empuja debajo de los elementos flotantes izquierdo o derecho. esto es por defecto
+        </li>
+        <li>
+            left- El elemento se empuja debajo de los elementos flotantes izquierdos
+        </li>
+        <li>
+            right- El elemento se empuja debajo de los elementos flotantes a la derecha
+        </li>
+        <li>
+            both- El elemento se empuja debajo de los elementos flotantes izquierdo y derecho
+        </li>
+    </ul>
+    <h3>Truco para elementos desbordados</h3>
+    <p>Si un elemento flotante es más alto que el elemento contenedor, se "desbordará" fuera de su contenedor. Luego
+        podemos agregar la declaracion overflow: auto para solventar el problema.</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio de margenes</title>
+  <style>
+    #primerEjecicio{
+      margin: 0 auto;
+      width: 200px;
+      height:200px;
+      border: 3px solid black;
+      box-sizing: border-box;
+      padding: 4em;
+    }
+    #primerEjecicio div{
+      border: 3px solid red;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+    #segundoEjercicio{
+      border: 3px solid black;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #segundoEjercicio div{
+      width: 100%;
+      height: 50%;
+      box-sizing: border-box;
+    }
+    #segundoEjercicio div:first-child{
+      border: greenyellow 3px solid;
+    }
+    #segundoEjercicio div:nth-child(2){
+      border: red 3px solid;
+    }
+    #tercerEjercicio{
+      border: 3px solid black;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #tercerEjercicio div{
+      width: 50%;
+      height: 100%;
+      box-sizing: border-box;
+      position: relative;
+      float:left;
+    }
+    #tercerEjercicio div:first-child{
+      border: greenyellow 3px solid;
+    }
+    #tercerEjercicio div:nth-child(2){
+      border: red 3px solid;
+    }
+    #cuartoEjercicio{
+      border: 3px solid black;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+    #cuartoEjercicio div{
+      width: 50%;
+      height: 50%;
+      float: left;
+      box-sizing: border-box;
+      border:  3px solid red;
+    }
+    #cuartoEjercicio div:first-child, #cuartoEjercicio div:last-child{
+      border:  3px solid greenyellow;
+    }
+    #quintoEjercicio{
+      width: 80%;
+      margin: 0 auto;
+      border:3px solid black;
+      height:200px;
+      overflow: hidden;
+      /*display: flex;*/
+      /*flex-wrap: wrap;*/
+    }
+    #quintoEjercicio div{
+      border: 10px green dotted;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+      float: left;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+<ol>
+  <li>Consigue lo siguiente</li>
+  <div id="primerEjecicio">
+    <div></div>
+  </div>
+  <li>
+    Consigue lo siguiente:
+  </li>
+  <div id="segundoEjercicio">
+    <div></div>
+    <div></div>
+  </div>
+  <li>Consigue lo siguiente:</li>
+  <div id="tercerEjercicio">
+    <div></div>
+    <div>&nbsp;</div>
+  </div>
+  <li>Consigue lo siguiente</li>
+  <div id="cuartoEjercicio">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <li>Consigue lo siguiente:</li>
+  <div id="quintoEjercicio">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+  </div>
+</ol>
+
+</body>
+</html>
