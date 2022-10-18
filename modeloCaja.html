@@ -1,151 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Modelo de Caja</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css"/>
 
     <style>
-      #modeloCaja {
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-      }
-      div#contenido {
-        min-width: 50%;
-        background-color: white;
-        text-align: center;
-        padding: 2em;
-        border: 5px gray dotted;
-      }
-      div#outline {
-        background-color: yellowgreen;
-        padding: 2em;
-      }
-      div#padding {
-        background-color: gray;
-        padding: 2em;
-      }
-      div#border {
-        background-color: rgb(17, 171, 61);
-        padding: 2em;
-      }
-      div#margen {
-        border: 2px solid black;
-        background-color: gray;
-        padding: 2em;
-      }
-      .center {
-        text-align: center;
-      }
-      #modeloCaja p {
-        position: absolute;
-        top: 0.5em;
-        left: 0;
-        width: 100%;
-      }
-      p#principal {
-        position: relative;
-        width: 35vw;
-        top: auto;
-        left: auto;
-      }
-      div {
-        position: relative;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Modelo de Caja</h1>
-    <div id="modeloCaja">
-      <div id="margen">
-        <p class="center"><span>Margen</span></p>
-        <div id="border">
-          <p class="center"><span>Border</span></p>
-          <div id="outline">
-            <p class="center"><span>Outline</span></p>
-            <div id="padding">
-              <p class="center"><span>Padding</span></p>
-              <div id="contenido">
-                <p id="principal">Contenido</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        #modeloCaja {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
-    <h2>¿Qué es?</h2>
-    <p>
-      Este término se utiliza para hablar de diseño o maquetación en css. Se
-      utiliza para hablar de una caja que se rodea a cualquier elemento que se
-      encuentre dentro del body
-    </p>
-    <p>Explicación de las diferentes partes:</p>
-    <ul>
-      <li>
+        div#contenido {
+            min-width: 50%;
+            background-color: white;
+            text-align: center;
+            padding: 2em;
+            border: 5px gray dotted;
+        }
+
+        div#outline {
+            background-color: yellowgreen;
+            padding: 2em;
+        }
+
+        div#padding {
+            background-color: gray;
+            padding: 2em;
+        }
+
+        div#border {
+            background-color: rgb(17, 171, 61);
+            padding: 2em;
+        }
+
+        div#margen {
+            border: 2px solid black;
+            background-color: gray;
+            padding: 2em;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #modeloCaja p {
+            position: absolute;
+            top: 0.5em;
+            left: 0;
+            width: 100%;
+        }
+
+        p#principal {
+            position: relative;
+            width: 35vw;
+            top: auto;
+            left: auto;
+        }
+
+        div {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<h1>Modelo de Caja</h1>
+<div id="modeloCaja">
+    <div id="margen">
+        <p class="center"><span>Margen</span></p>
+        <div id="outline">
+            <p class="center"><span>Outline</span></p>
+            <div id="border">
+                <p class="center"><span>Border</span></p>
+                <div id="padding">
+                    <p class="center"><span>Padding</span></p>
+                    <div id="contenido">
+                        <p id="principal">Contenido</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h2>¿Qué es?</h2>
+<p>
+    Este término se utiliza para hablar de diseño o maquetación en css. Se
+    utiliza para hablar de una caja que se rodea a cualquier elemento que se
+    encuentre dentro del body
+</p>
+<p>Explicación de las diferentes partes:</p>
+<ul>
+    <li>
         Contenido : el contenido del cuadro, donde aparecen el texto y las
         imágenes.
-      </li>
-      <li>
+    </li>
+    <li>
         Relleno : Es un área alrededor del contenido. El relleno es
         transparente. Dentro del relleno se encuentra el padding y el borde interno o Outline.
-      </li>
-      <li>Borde : un borde que rodea el relleno y el contenido.</li>
-      <li>
+    </li>
+    <li>Borde : un borde que rodea el relleno y el contenido.</li>
+    <li>
         Margen : borra un área fuera del borde. El margen es transparente.
-      </li>
-    </ul>
-    <p>
-      El modelo de caja nos permite agregar un borde alrededor de los elementos
-      y definir el espacio entre los elementos.
-    </p>
-    <h2>Ancho y alto de un elemento</h2>
+    </li>
+</ul>
+<p>
+    El modelo de caja nos permite agregar un borde alrededor de los elementos
+    y definir el espacio entre los elementos.
+</p>
+<h2>Ancho y alto de un elemento</h2>
 
-    <p>
-      Para establecer correctamente el ancho y el alto de un elemento en todos
-      los navegadores, debe saber cómo funciona el modelo de caja.
-    </p>
-    <p>
-      Importante: cuando establece las propiedades de ancho y alto de un
-      elemento con CSS, simplemente establece el ancho y el alto del área de
-      contenido . Para calcular el tamaño completo de un elemento, también debe
-      agregar relleno, bordes y márgenes.
-    </p>
-    <p>El ancho total de un elemento debe calcularse así:</p>
-    <p>
-      Ancho total del elemento = ancho + relleno izquierdo + relleno derecho +
-      borde izquierdo + borde derecho + margen izquierdo + margen derecho
-    </p>
-    <p>La altura total de un elemento debe calcularse así:</p>
-    <p>
-      Altura total del elemento = altura + relleno superior + relleno inferior +
-      borde superior + borde inferior + margen superior + margen inferio
-    </p>
-    <h2>Box-sizing</h2>
-    <p>
-      La propiedad CSS box-sizing nos permite incluir el relleno y el borde en
-      el ancho y alto total de un elemento.
-    </p>
-    <p>
-      Si establece box-sizing: border-box;en un elemento, el relleno y el borde
-      se incluyen en el ancho y la altura:
-    </p>
-    <p>
-      Dado que el resultado de usar el box-sizing: border-box;es mucho mejor,
-      muchos desarrolladores quieren que todos los elementos de sus páginas
-      funcionen de esta manera.
-    </p>
-    <p>
-      El siguiente código garantiza que todos los elementos tengan el tamaño de
-      esta forma más intuitiva. Muchos navegadores ya usan box-sizing:
-      border-box;muchos elementos de formulario (pero no todos, por lo que las
-      entradas y las áreas de texto se ven diferentes en el ancho: 100%;).
-    </p>
-    <p>Aplicar esto a todos los elementos es seguro y sabio:</p>
-  </body>
+<p>
+    Para establecer correctamente el ancho y el alto de un elemento en todos
+    los navegadores, debe saber cómo funciona el modelo de caja.
+</p>
+<p>
+    Importante: cuando establece las propiedades de ancho y alto de un
+    elemento con CSS, simplemente establece el ancho y el alto del área de
+    contenido . Para calcular el tamaño completo de un elemento, también debe
+    agregar relleno, bordes.
+</p>
+<p>El ancho total de un elemento debe calcularse así:</p>
+<p>
+    Ancho total del elemento = ancho + padding izquierdo + padding derecho +
+    borde izquierdo + borde derecho
+</p>
+<p>La altura total de un elemento debe calcularse así:</p>
+<p>
+    Altura total del elemento = altura + relleno superior + relleno inferior +
+    borde superior + borde inferior.
+</p>
+<p>Si la anchura total de un elemento depende de los elementos que van en su interior, debemos sumar también los
+    margenes al resultado total</p>
+<h2>Box-sizing</h2>
+<p>
+    La propiedad CSS box-sizing nos permite incluir el relleno y el borde en
+    el ancho y alto total de un elemento.
+</p>
+<p>
+    Si establece box-sizing: border-box;en un elemento, el relleno y el borde
+    se incluyen en el ancho y la altura:
+</p>
+<p>
+    Dado que el resultado de usar el box-sizing: border-box;es mucho mejor,
+    muchos desarrolladores quieren que todos los elementos de sus páginas
+    funcionen de esta manera.
+</p>
+<p>
+    El siguiente código garantiza que todos los elementos tengan el tamaño de
+    esta forma más intuitiva. Muchos navegadores ya usan box-sizing:
+    border-box;muchos elementos de formulario (pero no todos, por lo que las
+    entradas y las áreas de texto se ven diferentes en el ancho: 100%;).
+</p>
+<p>Aplicar esto a todos los elementos es seguro y sabio:</p>
+<p>Ver ejemplo del uso de borderBox <a href="ejemplos/ejemploBozing.html"><strong>aqui</strong></a></p>
+</body>
 </html>

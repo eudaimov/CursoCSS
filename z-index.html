@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+    <title>Z-index</title>
+  <style>
+    #ejemploZ{
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+      height: 360px;
+    }
+    #ejemploZ div{
+      min-width: 300px;
+      min-height: 300px;
+      position: absolute;
+      border-radius: 1em;
+    }
+    #capa1index{
+      background-color: rgba(255,0,0,1.0);
+    }
+    #capa2index{
+      transform: translate(20px, 20px);
+      background-color: rgba(100,200,0,1.0);
+    }
+    #capa3index{
+      transform: translate(40px, 40px);
+      background-color: rgba(0,200,200,1.0);
+    }
+    #capa4index{
+      transform: translate(60px, 60px);
+      background-color: rgba(255,0,200,1.0);
+    }
+  </style>
+</head>
+<body>
+<h1>Z-Index</h1>
+<h2>Introducción</h2>
+<section>
+  <p>La propiedad z-index se puede especificar con un valor entero (positivo, cero o negativo), que representa la
+    posición del elemento a lo largo del eje z. Si no está familiarizado con el eje z, imagine la página como una pila
+    de capas, cada una con un número. Las capas se representan en orden numérico, con los números más grandes sobre los
+    más pequeños.</p>
+  <p>El nivel por defecto es 0</p>
+  <p>La utilidad de esta propiedad se observa en aquellos elementos cuya posición no es estática("static")</p>
+</section>
+
+<h2>Ejemplo:</h2>
+<section id="ejemploZ">
+  <div id="capa1index"></div>
+  <div id="capa2index"></div>
+  <div id="capa3index"></div>
+  <div id="capa4index"></div>
+</section>
+<h3>Código:</h3>
+<p class="codigo">
+&lt;section id="ejemploZ"&gt;
+  &lt;div id="capaindex1"&gt;&lt;/div&gt;
+  &lt;div id="capaindex2"&gt;&lt;/div&gt;
+  &lt;div id="capaindex3"&gt;&lt;/div&gt;
+  &lt;div id="capaindex4"&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;style&gt;
+  #ejemploZ{
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 360px;
+  }
+  #ejemploZ div{
+    min-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    border-radius:1em;
+  }
+  #capaindex1{
+    background-color: rgba(255,0,0,1.0);
+  }
+  #capaindex2{
+    transform: translate(20px, 20px);
+    background-color: rgba(100,200,0,1.0);
+  }
+  #capaindex3{
+    transform: translate(40px, 40px);
+    background-color: rgba(0,200,200,1.0);
+  }
+  #capaindex4{
+    transform: translate(60px, 60px);
+    background-color: rgba(255,0,200,1.0);
+  }
+&lt;/style&gt;
+</p>
+
+
+</body>
+</html>

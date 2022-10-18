@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Posición</title>
+</head>
+<body>
+<h1>Posición</h1>
+<h2>Introducción</h2>
+<p>Con esta propiedad se especifica el método de posicionamiento de un elemento.</p>
+<p>El valor por defecto es static.</p>
+<p>Una vez elegido el método de posicionamiento podemos utilizar las propiedades top, right,button, left.</p>
+<h2>Estática:(static)</h2>
+<section>
+    <p>Los elementos HTML se colocan estáticos de forma predeterminada.</p>
+
+    <p>Los elementos posicionados estáticos no se ven afectados por las propiedades superior, inferior, izquierda y
+        derecha.</p>
+    <p>Un elemento con position: static;no está posicionado de ninguna manera especial; siempre se posiciona de acuerdo
+        con el flujo normal de la página:</p>
+</section>
+<h2>Relativa:(relative)</h2>
+<section>
+    <p>Un elemento con position: relative;se coloca en relación con su posición normal.</p>
+
+    <p>Establecer las propiedades superior, derecha, inferior e izquierda de un elemento relativamente posicionado hará
+        que se ajuste fuera de su posición normal. El resto del contenido no se ajustará para encajar en ningún espacio
+        dejado por el elemento.</p>
+</section>
+<h2>Absoluta:(absolute)</h2>
+<section>
+    <p>Un elemento con position: absolute;se coloca en relación con el ancestro posicionado más cercano (en lugar de
+        posicionarse en relación con la ventana gráfica, como fijo).</p>
+    <p>Se recomienda usar posición relativa para el ancestro.</p>
+
+    <p>Si un elemento con posición absoluta no tiene ancestros con posición, utiliza el cuerpo del documento y
+        se mueve junto con el desplazamiento de la página.</p>
+    <p>Nota: Los elementos de posición absoluta se eliminan del flujo normal y pueden superponerse a los elementos.</p>
+</section>
+
+<h2>Fija:(fixed)</h2>
+<section>
+    <p>Un elemento con position: fixed;se coloca en relación con la ventana gráfica, lo que significa que siempre
+        permanece en el mismo lugar, incluso si se desplaza la página. Las propiedades superior, derecha, inferior e
+        izquierda se utilizan para colocar el elemento.</p>
+
+    <p>Un elemento fijo no deja un espacio en la página donde normalmente habría estado ubicado.</p>
+
+    <p>Observe el elemento fijo en la esquina inferior derecha de la página.</p>
+</section>
+<h2>Pegajosa:(sticky)</h2>
+<section>
+    <p>Un elemento con position: sticky;se posiciona en función de la posición de desplazamiento del usuario.</p>
+
+    <p>Un elemento fijo alterna entre relative y fixed, dependiendo de la posición de desplazamiento. Se coloca en
+        relación hasta que se alcanza una posición de desplazamiento determinada en la ventana gráfica; luego, se "pega"
+        en su lugar (como posición: fija).</p>
+
+</section>
+
+
+</body>
+
+</html>

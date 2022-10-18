@@ -6,136 +6,263 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio de margenes</title>
-  <style>
-    #primerEjecicio{
-      margin: 0 auto;
-      width: 200px;
-      height:200px;
-      border: 3px solid black;
-      box-sizing: border-box;
-      padding: 4em;
-    }
-    #primerEjecicio div{
-      border: 3px solid red;
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-    }
-    #segundoEjercicio{
-      border: 3px solid black;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    #segundoEjercicio div{
-      width: 100%;
-      height: 50%;
-      box-sizing: border-box;
-    }
-    #segundoEjercicio div:first-child{
-      border: greenyellow 3px solid;
-    }
-    #segundoEjercicio div:nth-child(2){
-      border: red 3px solid;
-    }
-    #tercerEjercicio{
-      border: 3px solid black;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    #tercerEjercicio div{
-      width: 50%;
-      height: 100%;
-      box-sizing: border-box;
-      position: relative;
-      float:left;
-    }
-    #tercerEjercicio div:first-child{
-      border: greenyellow 3px solid;
-    }
-    #tercerEjercicio div:nth-child(2){
-      border: red 3px solid;
-    }
-    #cuartoEjercicio{
-      border: 3px solid black;
-      width: 200px;
-      height: 200px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    #cuartoEjercicio div{
-      width: 50%;
-      height: 50%;
-      float: left;
-      box-sizing: border-box;
-      border:  3px solid red;
-    }
-    #cuartoEjercicio div:first-child, #cuartoEjercicio div:last-child{
-      border:  3px solid greenyellow;
-    }
-    #quintoEjercicio{
-      width: 80%;
-      margin: 0 auto;
-      border:3px solid black;
-      height:200px;
-      overflow: hidden;
-      /*display: flex;*/
-      /*flex-wrap: wrap;*/
-    }
-    #quintoEjercicio div{
-      border: 10px green dotted;
-      box-sizing: border-box;
-      width: 100px;
-      height: 100px;
-      float: left;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <style>
+        @media print{
+            @page{
+                margin-block:2.5cm 2cm;
+               
+            }
+        }
+        #primerEjecicio {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            box-sizing: border-box;
+            padding: 4em;
+        }
 
-  </style>
+        #primerEjecicio div {
+            border: 3px solid red;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #segundoEjercicio {
+            border: 3px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        #segundoEjercicio div {
+            width: 100%;
+            height: 50%;
+            box-sizing: border-box;
+        }
+
+        #segundoEjercicio div:first-child {
+            border: greenyellow 3px solid;
+        }
+
+        #segundoEjercicio div:nth-child(2) {
+            border: red 3px solid;
+        }
+
+        #tercerEjercicio {
+            border: 3px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        #tercerEjercicio div {
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            position: relative;
+            float: left;
+        }
+
+        #tercerEjercicio div:first-child {
+            border: greenyellow 3px solid;
+        }
+
+        #tercerEjercicio div:nth-child(2) {
+            border: red 3px solid;
+        }
+
+        #cuartoEjercicio {
+            border: 3px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        #cuartoEjercicio div {
+            width: 50%;
+            height: 50%;
+            float: left;
+            box-sizing: border-box;
+            border: 3px solid red;
+        }
+
+        #cuartoEjercicio div:first-child, #cuartoEjercicio div:last-child {
+            border: 3px solid greenyellow;
+        }
+
+        #quintoEjercicio {
+            width: 80%;
+            margin: 0 auto;
+            border: 3px solid black;
+            height: 200px;
+            overflow: hidden;
+            page-break-before:always;
+        }
+
+        #quintoEjercicio div {
+            border: 10px green dotted;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #sextoEjercicio img {
+            float: left;
+            padding-right: 2em;
+        }
+
+        #sextoEjercicio p::first-letter {
+            font-size: 30pt;
+            line-height: 10px;
+        }
+
+        #sextoEjercicio p {
+            text-align: justify;
+            padding-right: 2em;
+        }
+        #septimoEjercicio img {
+            float: right;
+            padding-left:2em;
+        }
+
+        #septimoEjercicio p::first-letter {
+            font-size: 30pt;
+            line-height: 10px;
+        }
+
+        #septimoEjercicio p {
+            text-align: justify;
+            padding-right: 2em;
+        }
+
+
+    </style>
 </head>
 <body>
 <ol>
-  <li>Consigue lo siguiente</li>
-  <div id="primerEjecicio">
-    <div></div>
-  </div>
-  <li>
-    Consigue lo siguiente:
-  </li>
-  <div id="segundoEjercicio">
-    <div></div>
-    <div></div>
-  </div>
-  <li>Consigue lo siguiente:</li>
-  <div id="tercerEjercicio">
-    <div></div>
-    <div>&nbsp;</div>
-  </div>
-  <li>Consigue lo siguiente</li>
-  <div id="cuartoEjercicio">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <li>Consigue lo siguiente:</li>
-  <div id="quintoEjercicio">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-    <div>7</div>
-    <div>8</div>
-    <div>9</div>
-    <div>10</div>
-  </div>
+    <li>Consigue lo siguiente</li>
+    <div id="primerEjecicio">
+        <div></div>
+    </div>
+    <li>
+        Consigue lo siguiente:
+    </li>
+    <div id="segundoEjercicio">
+        <div></div>
+        <div></div>
+    </div>
+    <li>Consigue lo siguiente:</li>
+    <div id="tercerEjercicio">
+        <div></div>
+        <div>&nbsp;</div>
+    </div>
+    <li>Consigue lo siguiente</li>
+    <div id="cuartoEjercicio">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <li>Consigue lo siguiente:</li>
+    <div id="quintoEjercicio">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+    <li>Consigue lo siguiente:
+        <div id="sextoEjercicio">
+            <p>
+                <img src="./../img/fondo.png" width="400" height="300px" alt="">Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Commodi cumque enim fuga harum maxime odit omnis placeat quae quia, voluptatum.
+                Adipisci aspernatur deleniti ducimus earum eum eveniet explicabo facere harum hic ipsa ipsum itaque iure
+                minus modi officiis optio quas quia quibusdam quod repellat sapiente sequi sint tempore unde, voluptas!
+                A, deleniti dignissimos enim minus odit quos rerum sunt? A ab aliquam architecto assumenda at atque
+                corporis cumque debitis dignissimos doloremque ducimus eaque earum eius error et fugiat id impedit
+                inventore iure labore laudantium molestiae mollitia nisi officiis, pariatur possimus quae, quia quo
+                ratione reiciendis, sapiente sint velit voluptates. Alias amet, dolorum inventore libero modi natus
+                necessitatibus nemo veniam vero vitae. Consequatur inventore iusto labore natus, quae quasi quis saepe
+                totam! Ab, culpa dolorum eius et fugit libero possimus sint! Ab ad alias aliquam aperiam cupiditate
+                dignissimos dolore, eaque eius impedit officia quibusdam vel veniam voluptate? Dolorem eos odio rem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid amet asperiores aspernatur
+                assumenda beatae dicta eius eligendi esse excepturi facilis maiores necessitatibus optio, pariatur
+                perferendis quae, quod soluta voluptatum! Aliquid dolore excepturi molestiae perferendis. Accusamus
+                animi architecto consectetur debitis distinctio dolore eaque expedita harum id ipsum iste iusto, laborum
+                modi nostrum optio recusandae similique soluta tenetur. <br><br>A aliquid deleniti dolorem, ducimus ea eaque id
+                iste modi nobis quaerat, quasi qui similique voluptatem? Ab ad aliquam amet commodi, consectetur cum
+                cupiditate debitis distinctio doloribus fugit hic id illum inventore libero molestias mollitia
+                necessitatibus nihil nisi numquam ratione recusandae reiciendis reprehenderit, sint soluta sunt tenetur
+                totam? Consequuntur distinctio ea, id magni maiores odit pariatur? Ab adipisci, aliquam atque dicta
+                dolor dolorum eius esse excepturi fuga hic in ipsam iste laboriosam maxime nam nemo nesciunt nostrum
+                odio perferendis possimus provident quasi quis quisquam repudiandae totam. Aperiam assumenda, at
+                deleniti doloremque eaque eos error eveniet expedita fugit illo impedit ipsa ipsam laboriosam laudantium
+                nihil officia omnis porro quam, quibusdam quidem totam ullam vitae voluptate. Distinctio dolor dolorum
+                inventore iure laudantium recusandae repudiandae similique totam. Ad autem culpa dolorum fugit in, ipsa
+                molestiae obcaecati officia optio quae quas sequi sit, suscipit, totam ullam vel vitae. Aperiam earum
+                fugit repellat? Ad cumque cupiditate doloribus ea, et ex fugit nesciunt placeat quibusdam recusandae?
+                Asperiores doloremque et fugiat tenetur. Ab alias at, doloremque et eum ex fugit magnam, minima minus
+                molestias nesciunt nulla quas qui quibusdam quo repellat sed! Cumque dolor doloremque explicabo facere
+                molestias nemo porro quod rem. At debitis delectus ex magni minus nobis officia quam. Aliquam eos
+                laborum omnis ullam? Amet consequatur illo, in sunt veritatis voluptate? Accusamus accusantium delectus
+                deleniti eos explicabo fugit harum incidunt laborum minima minus natus, nesciunt nulla obcaecati
+                perspiciatis quam quas quibusdam repellat soluta, totam ullam ut veniam voluptatibus.
+            </p>
+
+        </div>
+        <div id="septimoEjercicio">
+            <p>
+                <img src="./../img/fondo.png" width="400" height="300px" alt="">Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Commodi cumque enim fuga harum maxime odit omnis placeat quae quia, voluptatum.
+                Adipisci aspernatur deleniti ducimus earum eum eveniet explicabo facere harum hic ipsa ipsum itaque iure
+                minus modi officiis optio quas quia quibusdam quod repellat sapiente sequi sint tempore unde, voluptas!
+                A, deleniti dignissimos enim minus odit quos rerum sunt? A ab aliquam architecto assumenda at atque
+                corporis cumque debitis dignissimos doloremque ducimus eaque earum eius error et fugiat id impedit
+                inventore iure labore laudantium molestiae mollitia nisi officiis, pariatur possimus quae, quia quo
+                ratione reiciendis, sapiente sint velit voluptates. Alias amet, dolorum inventore libero modi natus
+                necessitatibus nemo veniam vero vitae. Consequatur inventore iusto labore natus, quae quasi quis saepe
+                totam! Ab, culpa dolorum eius et fugit libero possimus sint! Ab ad alias aliquam aperiam cupiditate
+                dignissimos dolore, eaque eius impedit officia quibusdam vel veniam voluptate? Dolorem eos odio rem.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid amet asperiores aspernatur
+                assumenda beatae dicta eius eligendi esse excepturi facilis maiores necessitatibus optio, pariatur
+                perferendis quae, quod soluta voluptatum! Aliquid dolore excepturi molestiae perferendis. Accusamus
+                animi architecto consectetur debitis distinctio dolore eaque expedita harum id ipsum iste iusto, laborum
+                modi nostrum optio recusandae similique soluta tenetur. <br><br>A aliquid deleniti dolorem, ducimus ea eaque id
+                iste modi nobis quaerat, quasi qui similique voluptatem? Ab ad aliquam amet commodi, consectetur cum
+                cupiditate debitis distinctio doloribus fugit hic id illum inventore libero molestias mollitia
+                necessitatibus nihil nisi numquam ratione recusandae reiciendis reprehenderit, sint soluta sunt tenetur
+                totam? Consequuntur distinctio ea, id magni maiores odit pariatur? Ab adipisci, aliquam atque dicta
+                dolor dolorum eius esse excepturi fuga hic in ipsam iste laboriosam maxime nam nemo nesciunt nostrum
+                odio perferendis possimus provident quasi quis quisquam repudiandae totam. Aperiam assumenda, at
+                deleniti doloremque eaque eos error eveniet expedita fugit illo impedit ipsa ipsam laboriosam laudantium
+                nihil officia omnis porro quam, quibusdam quidem totam ullam vitae voluptate. Distinctio dolor dolorum
+                inventore iure laudantium recusandae repudiandae similique totam. Ad autem culpa dolorum fugit in, ipsa
+                molestiae obcaecati officia optio quae quas sequi sit, suscipit, totam ullam vel vitae. Aperiam earum
+                fugit repellat? Ad cumque cupiditate doloribus ea, et ex fugit nesciunt placeat quibusdam recusandae?
+                Asperiores doloremque et fugiat tenetur. Ab alias at, doloremque et eum ex fugit magnam, minima minus
+                molestias nesciunt nulla quas qui quibusdam quo repellat sed! Cumque dolor doloremque explicabo facere
+                molestias nemo porro quod rem. At debitis delectus ex magni minus nobis officia quam. Aliquam eos
+                laborum omnis ullam? Amet consequatur illo, in sunt veritatis voluptate? Accusamus accusantium delectus
+                deleniti eos explicabo fugit harum incidunt laborum minima minus natus, nesciunt nulla obcaecati
+                perspiciatis quam quas quibusdam repellat soluta, totam ullam ut veniam voluptatibus.
+            </p>
+
+        </div>
+    </li>
 </ol>
 
 </body>

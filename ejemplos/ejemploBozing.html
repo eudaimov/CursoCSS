@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Ejemplo de Box-sizing</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+    }
+  .borderBox{
+    box-sizing: border-box;
+  }
+  .sinBorderBox{
+    box-sizing: content-box;
+  }
+  div.mySize{
+    width: 25vw;
+    height: 25vw;
+    border:2vw solid gray;
+    padding: 2vw;
+
+  }
+  div.especial{
+      box-sizing: border-box;
+      border:1px solid black;
+      height: 25vw;
+      width: 2vw;
+      padding:0;
+  }
+  .centrado{
+      border:none;
+      margin:2em auto;
+      width: 33vw;
+  }
+  .myCentrado{
+      margin:2em auto;
+  }
+  .centrado div{
+      float:left;
+  }
+  .cajaGrande{
+      width: 500px;
+      height: 50px;
+      outline: 2px black solid;
+
+  }
+  .minicajas{
+      width: 50px;
+      height: 50px;
+      border: 2px white solid;
+      background-color: green;
+      float: left;
+  }
+  .codigo{
+      background-color: lightblue;
+      white-space: pre;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 1em;
+  }
+  body{
+      margin: 4em;
+  }
+
+</style>
+<body>
+<h1>Ejemplo Border Box</h1>
+<p class="codigo">Detalles
+width: 25vw;
+height: 25vw;
+border:2vw solid gray;
+padding: 2vw;
+</p>
+<h2>Sin border-box</h2>
+<div class="sinBorderBox mySize myCentrado">Cuadro</div>
+<h2>Con Border-box</h2>
+<div class="centrado">
+    <div class="borderBox mySize">Cuadro</div>
+    <div class="especial"></div>
+    <div class="especial"></div>
+    <div class="especial"></div>
+    <div class="especial"></div>
+</div>
+<h1 style="clear: left">Ejemplo Border Box con varias Cajas </h1>
+<h2>Sin borderBox en las cajitas verdes.</h2>
+<p class="codigo"><strong>Detalles:</strong>
+width: 50px;
+height: 50px;
+border: 2px white solid;
+background-color: green;
+float: left;</p>
+<div class="cajaGrande">
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+    <div class="minicajas sinBorderBos"></div>
+</div>
+<h2 style="clear: left">Con border box en las cajitas verdes</h2>
+
+<div class="cajaGrande">
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+    <div class="minicajas borderBox"></div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
