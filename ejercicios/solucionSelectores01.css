@@ -1,0 +1,59 @@
+/*Ejercicio n1*/
+h1{
+    font-size: 2.5em;
+    color:pink;
+}
+/*Ejercicio n2*/
+#cursiva{
+    font-style: italic;
+}
+/*Ejercicio n3*/
+span.cursiva{
+    font-style: italic;
+    color:red;
+}
+/*Ejercicio nº4*/
+h2, div{
+    background-color: azure;
+}
+/*Ejercicio n5*/
+*{
+    margin:0
+}
+/*Ejercicio nº6*/
+#section4 p{
+    color:purple;
+    margin-inline: 2em;
+}
+/*Ejercicio n7*/
+article>p{
+    font-size:16pt;
+}
+/*Ejercicio n8*/
+article+p{
+    text-indent: 3.5em;
+
+}
+/*Ejercicio n9*/
+#section4 article+p{
+    margin-inline: 30%;
+    color:green;
+}
+
+button:hover {
+    outline: 4px solid rgb(150, 220, 20); !important;
+    background-color: white !important;
+    color: rgb(150,220,20) !important;
+    cursor: pointer !important;
+}
+button:hover::after{
+    content: "\26A0 Peligro";
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -1.5em;
+    left:0;
+    color:red;
+    font-size: 1em;
+    font-weight: bold;
+}

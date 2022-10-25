@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Ejercicio Z-Index</title>
+</head>
+<style>
+    *{
+        margin:0;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin: 2em;
+    }
+    #ejemploZ{
+        position: relative;
+        width: 300px;
+        right: 10px;
+        height: 360px;
+    }
+    #ejemploZ div{
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border-radius: 1em;
+    }
+    #capa1index{
+        background-color: rgba(255,0,0,1.0);
+        transform: translate(99px, 99px);
+    }
+    #capa2index{
+        background-color: rgba(100,200,0,1.0);
+        transform: translate(66px,66px);
+    }
+    #capa3index{
+        transform:  translate(33px, 33px);
+        background-color: rgba(0,200,200,1.0);
+    }
+    #capa4index{
+        background-color: rgba(255,0,200,1.0);
+    }
+    .zindex4{
+        z-index: 4;
+    }
+    .zindex3{
+        z-index: 3;
+    }
+    .zindex2{
+        z-index: 2;
+    }
+    .zindex1{
+        z-index: 1;
+    }
+    .centrado{
+        text-align: center;
+    }
+    button{
+        background-color: dodgerblue;
+        color:white;
+        padding: 1em;
+        font-size: 1.5rem;
+        border: none;
+        font-weight: bold;
+        border-radius: 1em;
+    }
+    button:hover{
+        color:dodgerblue;
+        background-color: transparent;
+        outline: dodgerblue 2px solid;
+        cursor: pointer;
+    }
+
+    /*Ejercicio 2*/
+    #ejercicio2{
+        width: 50%;
+        height: 300px;
+        border:1px solid black;
+        align-items: center;
+        position:relative;
+        overflow: hidden;
+    }
+    #ejercicio2 #menu{
+        background-color: dodgerblue;
+        position: absolute;
+        top:3em;
+        right:-50%;
+        width: 50%;
+        height: calc(100% - 3em);
+        z-index: 2;
+    }
+    #ejercicio2 nav{
+        background-color: deepskyblue;
+        z-index:3;
+        position: relative;
+        text-align: right;
+        height: 3em;
+    }
+    #ejercicio2 #contenidoPrincipal{
+        background-color: lightblue;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top:0;
+    }
+    #ejercicio2 #iconoMenu{
+        font-size: 2rem;
+        display: inline-block;/*Si coloco inline transform no funciona*/
+    }
+    #ejercicio2 .girarPositionInicial{
+        transform: rotateZ(-90deg);
+        transition: 2s;
+    }
+    #ejercicio2 .girarPositionFinal{
+        transform: rotateZ(90deg);
+        transition: 2s;
+    }
+    #ejercicio2 #iconoMenu:hover{
+        cursor: pointer;
+    }
+    .moverPositionOriginal{
+        transition: 2s;
+        transform: translateX(0px);
+    }
+    #ejercicio2 .moverPositionFinal{
+        transform: translateX(-100%);
+        transition: 2s;
+    }
+    /*Anulacion de css*/
+    nav{
+        margin: 0;
+    }
+    </style>
+<body>
+<h1>Ejercicios Position, Z-Index</h1>
+<h3>Primer Ejercicio</h3>
+<p>Ayuda:</p>
+<ul>
+    <li>Tamaño de los div: 200px x 200px</li>
+    <li>Separación entre div: transform: translation(33px, 33px);(Los siguientes se deberían multiplicar);</li>
+</ul>
+<div class="container">
+    <section id="ejemploZ">
+        <div id="capa4index"></div>
+        <div id="capa3index"></div>
+        <div id="capa2index"></div>
+        <div id="capa1index"></div>
+    </section>
+</div>
+
+<p class="centrado"><button onclick="cambiarOrden()">Cambiar Orden</button></p>
+<h3>Segundo Ejercicio</h3>
+<p>Ayuda: </p>
+<ul>
+    <li>Icono: &amp;#128315;</li>
+    <li>Para JavaScript se utiliza las propiedad junto con el método classList.toggle("nameClass")</li>
+</ul>
+<div class="container">
+    <section id="ejercicio2">
+        <div id="menu" class="moverPositionOriginal">Menu</div>
+        <nav>
+            <span id="iconoMenu" onclick="mostrarMenu()" class="girarPositionInicial">&#128315;</span>
+        </nav>
+        <div id="contenidoPrincipal">
+
+        </div>
+
+
+    </section>
+</div>
+
+
+</body>
+<script>
+    function cambiarOrden() {
+        document.querySelector("#capa1index").classList.toggle("zindex1");
+        document.querySelector("#capa2index").classList.toggle("zindex2");
+        document.querySelector("#capa3index").classList.toggle("zindex3");
+        document.querySelector("#capa4index").classList.toggle("zindex4");
+    }
+    function mostrarMenu() {
+        document.getElementById("menu").classList.toggle("moverPositionFinal");
+        document.getElementById("menu").classList.toggle("moverPositionOriginal");
+        document.getElementById("iconoMenu").classList.toggle("girarPositionFinal");
+        document.getElementById("iconoMenu").classList.toggle("girarPositionInicial");
+    }
+</script>
+
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display: Flex</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>Display: Flex</h1>
+<h2>Introducción</h2>
+<section>
+    <p>El módulo FlexBox es recomendado por w3c desde 2017, como herramienta eficiente para diseñar, alinear y
+        distribuir
+        el espacio entre los elementos de un contenedor, incluso cuando su tamaño es desconocido o dinámico.</p>
+    <p>La idea principal detrás del diseño flexible es darle al contenedor la capacidad de modificar el ancho/alto (y el
+        orden) de sus elementos para llenar mejor el espacio disponible (principalmente para adaptarse a todo tipo de
+        dispositivos de visualización y tamaños de pantalla). Un contenedor flexible expande los elementos para llenar
+        el espacio libre disponible o los reduce para evitar el desbordamiento.</p>
+    <p>Lo que es más importante, el diseño de flexbox es independiente de la dirección a diferencia de los diseños
+        normales (bloque que tiene una base vertical y en línea que tiene una base horizontal). Si bien funcionan bien
+        para las páginas, carecen de flexibilidad (sin juego de palabras) para admitir aplicaciones grandes o complejas
+        (especialmente cuando se trata de cambiar la orientación, cambiar el tamaño, estirar, encoger, etc.).</p>
+    <p>El diseño de Flexbox es más apropiado para los componentes de una aplicación y diseños de pequeña escala,
+        mientras que el diseño de cuadrícula está diseñado para diseños de mayor escala.</p>
+</section>
+<h2>Conceptos básicos y terminología </h2>
+<section>
+    <p>Dado que flexbox es un módulo completo y no una sola propiedad, implica muchas cosas, incluido su conjunto
+        completo de propiedades. Algunos de ellos están destinados a establecerse en el contenedor (elemento principal,
+        conocido como "contenedor flexible"), mientras que otros están destinados a establecerse en los elementos
+        secundarios (dichos "elementos flexibles").</p>
+    <p>Si el diseño "regular" se basa en direcciones de flujo en bloque y en línea, el diseño flexible se basa en
+        "direcciones de flujo flexible". Eche un vistazo a esta figura de la especificación, que explica la idea
+        principal detrás del diseño flexible.</p>
+    <p class="centrado"><img src="img/flex/Conceptos%20y%20terminología.png" alt="flexbox-ejes imagen" width="50%"></p>
+    <ul>
+
+    </ul>
+    <li>Eje principal : el eje principal de un contenedor flexible es el eje principal a lo largo del cual se disponen
+        los elementos flexibles. Cuidado, no es necesariamente horizontal, depende de la propiedad flex-direction (ver
+        más abajo).
+    </li>
+    <li>Inicio y final del eje principal: los elementos flexibles se colocan dentro del contenedor comenzando desde el
+        inicio hasta el final del eje principal.
+    </li>
+    <li>Tamaño del eje principal : es el tamaño principal del elemento y se define mediante las propiedades
+        'ancho' o 'alto', del contenedor principal.
+    </li>
+    <li>Eje transversal: el eje perpendicular al eje principal se denomina eje transversal. Su dirección depende de la
+        dirección del eje principal.
+    </li>
+    <li>inicio y final del eje transversal : las líneas flexibles se llenan con artículos y se colocan en el contenedor
+        comenzando en el lado de inicio cruzado del contenedor flexible y yendo hacia el lado del extremo cruzado.
+    </li>
+    <li>Tamaño del eje transveral : Es la dimensión opuesta al tamaño principal, dependerá de las dimensiones de los
+        elementos que
+        lo componen y lo rellenan.
+    </li>
+</section>
+
+<h2>Propiedades</h2>
+<h3>Propiedades para el padre</h3>
+<section>
+    <h4>display</h4>
+    <p>Se define en el elemento contenedor del resto de elementos.</p>
+    <p class="codigo">display:flex</p>
+    <h4>flex-direction</h4>
+    <section>
+        <p>Define la dirección del eje principal y como efecto colateral el eje transversal. Dispone los elementos contenidos en filas o en columnas. Los
+            diferentes valores que puede tomar son: </p>
+        <ul>
+            <li>row(valor por defecto):En forma de fila de izquierda a derecha.</li>
+            <li>column: En forma de columna de arriba abajo.</li>
+            <li>row-reverse: En forma de fila de derecha a izquierda.</li>
+            <li>column-reverse: En forma de columna de abajo arriba.</li>
+        </ul>
+    </section>
+    <p class="codigo">flex-direction:column;</p>
+    <h4>flex-wrap</h4>
+    <section>
+        <p>Describen el comportamiento en el caso de que los elemento no entre por su dimensiones en el eje principal.
+            Por defecto intentará encajar en el eje principal, reajustando las dimensiones pero puede cambiar esta
+            propiedad. Los diferentes valores que puede tomar son:</p>
+        <ul>
+            <li>nowrap(valor por defecto):Ajusta todos los item al eje principal. El texto desbordará y se puede
+                producir error en visualización
+            </li>
+            <li>wrap: Produce un salto, creando una nueva fila o columna en el eje principal dependiendo de la
+                dirección.
+            </li>
+            <li>wrap: Produce un salto, creando una nueva fila o columna en la parte contraria que lo hacia wrap,
+                dependera como acabamos de decir de la dirección
+            </li>
+        </ul>
+        <p>Por ejemplo:</p>
+        <p class="codigo">flex-wrap:wrap;</p>
+
+    </section>
+    <h4>flex-flow</h4>
+    <section>
+        <p>Son dos propiedades en una, digamos que es un atajo para describir las propiedades flex-direction y flew-wrap
+            en una sola.</p>
+        <p>Por ejemplo:</p>
+        <p class="codigo">flex-flow:column wrap;</p>
+    </section>
+    <h4>justify-content</h4>
+    <section>
+        <p>Define la distribucción o alineación de los elementos que se encuentra dentro del contenedor a lo largo del
+            eje principal. Los valores principales que puede coger son:</p>
+        <ul>
+            <li>start: Los elementos comienza a alinearse partiendo del principio del eje principal</li>
+            <li>center: Los elementos comienza a alinearse partiendo del centro del eje principal</li>
+            <li>end: Los elementos comienza a alinearse partiendo del final del eje principal</li>
+            <li>space-between: Los elementos se distribuyen uniformemente a lo largo del eje principal sin dejar ningún
+            margen.</li>
+            <li>space-around: Los elementos se distribuyen uniformemente a lo largo del eje principal dejando un margen,
+                el cual equivaldra a justo la mitad de la separación que existe en el interior.</li>
+            <li>space-evenly: Los elementos se distribuyen uniformemente a lo largo del eje principal dejando un margen,
+                el cual será igual a la separación existente en el interior.</li>
+        </ul>
+    </section>
+    <h4>align-items</h4>
+    <section>
+        <p>Define la distribucción o alineación de los elementos que se encuentra dentro del contenedor a lo largo del
+            eje transversal. Los valores principales que puede coger son:</p>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <h4>align-content</h4>
+    <h4>gap,row-gap, column-gap</h4>
+</section>
+<h3>Propiedades de los hijos</h3>
+<section>
+    <h4>order</h4>
+    <h4>flex-grow</h4>
+    <h4>flex-shrink</h4>
+    <h4>flex-basic</h4>
+    <h4>flex</h4>
+    <h4>align-self</h4>
+</section>
+
+</body>
+</html>
