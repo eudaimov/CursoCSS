@@ -5,149 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Ejercicio de margenes</title>
-    <style>
-        @media print{
-            @page{
-                margin-block:2.5cm 2cm;
-               
-            }
-        }
-        #primerEjecicio {
-            margin: 0 auto;
-            width: 200px;
-            height: 200px;
-            border: 3px solid black;
-            box-sizing: border-box;
-            padding: 4em;
-        }
-
-        #primerEjecicio div {
-            border: 3px solid red;
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-        }
-
-        #segundoEjercicio {
-            border: 3px solid black;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-
-        #segundoEjercicio div {
-            width: 100%;
-            height: 50%;
-            box-sizing: border-box;
-        }
-
-        #segundoEjercicio div:first-child {
-            border: greenyellow 3px solid;
-        }
-
-        #segundoEjercicio div:nth-child(2) {
-            border: red 3px solid;
-        }
-
-        #tercerEjercicio {
-            border: 3px solid black;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-
-        #tercerEjercicio div {
-            width: 50%;
-            height: 100%;
-            box-sizing: border-box;
-            position: relative;
-            float: left;
-        }
-
-        #tercerEjercicio div:first-child {
-            border: greenyellow 3px solid;
-        }
-
-        #tercerEjercicio div:nth-child(2) {
-            border: red 3px solid;
-        }
-
-        #cuartoEjercicio {
-            border: 3px solid black;
-            width: 200px;
-            height: 200px;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-
-        #cuartoEjercicio div {
-            width: 50%;
-            height: 50%;
-            float: left;
-            box-sizing: border-box;
-            border: 3px solid red;
-        }
-
-        #cuartoEjercicio div:first-child, #cuartoEjercicio div:last-child {
-            border: 3px solid greenyellow;
-        }
-
-        #quintoEjercicio {
-            width: 80%;
-            margin: 0 auto;
-            border: 3px solid black;
-            height: 200px;
-            overflow: hidden;
-            page-break-before:always;
-        }
-
-        #quintoEjercicio div {
-            border: 10px green dotted;
-            box-sizing: border-box;
-            width: 100px;
-            height: 100px;
-            float: left;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #sextoEjercicio img {
-            float: left;
-            padding-right: 2em;
-        }
-
-        #sextoEjercicio p::first-letter {
-            font-size: 30pt;
-            line-height: 10px;
-        }
-
-        #sextoEjercicio p {
-            text-align: justify;
-            padding-right: 2em;
-        }
-        #septimoEjercicio img {
-            float: right;
-            padding-left:2em;
-        }
-
-        #septimoEjercicio p::first-letter {
-            font-size: 30pt;
-            line-height: 10px;
-        }
-
-        #septimoEjercicio p {
-            text-align: justify;
-            padding-right: 2em;
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="solucionPosition.css">
 </head>
 <body>
+<h1>Ejercicios Márgenes internos y externos, position, float, display.</h1>
 <ol>
     <li>Consigue lo siguiente</li>
     <div id="primerEjecicio">
@@ -263,6 +126,23 @@
 
         </div>
     </li>
+
+    <li>Consigue lo siguiente:</li>
+
+    <div id="octavoEjercicio">
+        <header>
+            <p>Encabezado</p>
+        </header>
+        <aside>
+            <p>Aside</p>
+        </aside>
+        <main>
+            <p>Main</p>
+        </main>
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
 </ol>
 
 </body>
