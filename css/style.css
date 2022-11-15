@@ -37,7 +37,7 @@ h1, h2, h3, h4, h5, h6{
     box-sizing: border-box;
     padding:0;
 }
-.codigo{
+.code{
     background-color: rgb(191, 211, 248);
     font-family: 'Courier New', Courier, monospace;
     margin:1em 2em;
@@ -108,7 +108,7 @@ a{
     font-size:2rem;
 }
 @media screen and (min-width: 1050px) {
-    .codigo{
+    .code{
         white-space: pre-wrap;
     }
 }

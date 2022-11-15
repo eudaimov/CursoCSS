@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Display: Flex</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 <h1>Display: Flex</h1>
@@ -35,30 +35,35 @@
     <p>Si el diseño "regular" se basa en direcciones de flujo en bloque y en línea, el diseño flexible se basa en
         "direcciones de flujo flexible". Eche un vistazo a esta figura de la especificación, que explica la idea
         principal detrás del diseño flexible.</p>
-    <p class="centrado"><img src="img/flex/Conceptos%20y%20terminología.png" alt="flexbox-ejes imagen" width="50%"></p>
+    <p class="centrado"><img alt="flexbox-ejes imagen" src="img/flex/Conceptos%20y%20terminología.png"
+                             style="max-width: 800px; width: 50%"></p>
     <ul>
-
+        <li>Eje principal: el eje principal de un contenedor flexible es el eje principal a lo largo del cual se
+            disponen
+            los elementos flexibles. Cuidado, no es necesariamente horizontal, depende de la propiedad flex-direction
+            (ver
+            más abajo).
+        </li>
+        <li>Inicio y final del eje principal: los elementos flexibles se colocan dentro del contenedor comenzando desde
+            el
+            inicio hasta el final del eje principal.
+        </li>
+        <li>Tamaño del eje principal: es el tamaño principal del elemento y se define mediante las propiedades
+            'ancho' o 'alto', del contenedor principal.
+        </li>
+        <li>Eje transversal: el eje perpendicular al eje principal se denomina eje transversal. Su dirección depende de
+            la
+            dirección del eje principal.
+        </li>
+        <li>inicio y final del eje transversal: las líneas flexibles se llenan con artículos y se colocan en el
+            contenedor
+            comenzando en el lado de inicio cruzado del contenedor flexible y yendo hacia el lado del extremo cruzado.
+        </li>
+        <li>Tamaño del eje transversal: Es la dimensión opuesta al tamaño principal, dependerá de las dimensiones de los
+            elementos que
+            lo componen y lo rellenan.
+        </li>
     </ul>
-    <li>Eje principal : el eje principal de un contenedor flexible es el eje principal a lo largo del cual se disponen
-        los elementos flexibles. Cuidado, no es necesariamente horizontal, depende de la propiedad flex-direction (ver
-        más abajo).
-    </li>
-    <li>Inicio y final del eje principal: los elementos flexibles se colocan dentro del contenedor comenzando desde el
-        inicio hasta el final del eje principal.
-    </li>
-    <li>Tamaño del eje principal : es el tamaño principal del elemento y se define mediante las propiedades
-        'ancho' o 'alto', del contenedor principal.
-    </li>
-    <li>Eje transversal: el eje perpendicular al eje principal se denomina eje transversal. Su dirección depende de la
-        dirección del eje principal.
-    </li>
-    <li>inicio y final del eje transversal : las líneas flexibles se llenan con artículos y se colocan en el contenedor
-        comenzando en el lado de inicio cruzado del contenedor flexible y yendo hacia el lado del extremo cruzado.
-    </li>
-    <li>Tamaño del eje transveral : Es la dimensión opuesta al tamaño principal, dependerá de las dimensiones de los
-        elementos que
-        lo componen y lo rellenan.
-    </li>
 </section>
 
 <h2>Propiedades</h2>
@@ -66,7 +71,7 @@
 <section>
     <h4>display</h4>
     <p>Se define en el elemento contenedor del resto de elementos.</p>
-    <p class="codigo">display:flex</p>
+    <p class="code">display:flex</p>
     <h4>flex-direction</h4>
     <section>
         <p>Define la dirección del eje principal y como efecto colateral el eje transversal. Dispone los elementos
@@ -79,11 +84,11 @@
             <li>column-reverse: En forma de columna de abajo arriba.</li>
         </ul>
     </section>
-    <p class="codigo">flex-direction:column;</p>
+    <p class="code">flex-direction:column;</p>
     <h4>flex-wrap</h4>
     <section>
-        <p>Describen el comportamiento en el caso de que los elemento no entre por su dimensiones en el eje principal.
-            Por defecto intentará encajar en el eje principal, reajustando las dimensiones pero puede cambiar esta
+        <p>Describen el comportamiento en el caso de que los elemento no entre por sus dimensiones en el eje principal.
+            Por defecto intentará encajar en el eje principal reajustando las dimensiones, pero puede cambiar esta
             propiedad. Los diferentes valores que puede tomar son:</p>
         <ul>
             <li>nowrap(valor por defecto):Ajusta todos los item al eje principal. El texto desbordará y se puede
@@ -92,12 +97,13 @@
             <li>wrap: Produce un salto, creando una nueva fila o columna en el eje principal dependiendo de la
                 dirección.
             </li>
-            <li>wrap-reverse: Produce un salto, creando una nueva fila o columna en la parte contraria que lo hacia wrap,
-                dependerá como acabamos de decir de la dirección
+            <li>wrap-reverse: Produce un salto, creando una nueva fila o columna en la parte contraria a la que lo hacía
+                wrap,
+                dependerá, como acabamos de decir, de la dirección
             </li>
         </ul>
         <p>Por ejemplo:</p>
-        <p class="codigo">flex-wrap:wrap;</p>
+        <p class="code">flex-wrap:wrap;</p>
 
     </section>
     <h4>flex-flow</h4>
@@ -105,7 +111,7 @@
         <p>Son dos propiedades en una, digamos que es un atajo para describir las propiedades flex-direction y flew-wrap
             en una sola.</p>
         <p>Por ejemplo:</p>
-        <p class="codigo">flex-flow:column wrap;</p>
+        <p class="code">flex-flow:column wrap;</p>
     </section>
     <h4>justify-content</h4>
     <section>
@@ -119,7 +125,7 @@
                 margen.
             </li>
             <li>space-around: Los elementos se distribuyen uniformemente a lo largo del eje principal dejando un margen,
-                el cual equivaldra a justo la mitad de la separación que existe en el interior.
+                el cual equivaldría a justo la mitad de la separación que existe en el interior.
             </li>
             <li>space-evenly: Los elementos se distribuyen uniformemente a lo largo del eje principal dejando un margen,
                 el cual será igual a la separación existente en el interior.
@@ -131,20 +137,20 @@
         <p>Definen la posición y distribución de los elementos que se encuentra dentro del contenedor a lo largo del
             eje transversal.</p>
         <p>Esta pensado para usarse con <strong>no-wrap</strong>(no salto), aunque también se puede utilizar con wrap.
-            Aunque entrará en conflicto con align-content.y este último tendrá prioridad sobre este.</p>
+            Aunque entrará en conflicto con align-content, y este último tendrá prioridad sobre este.</p>
         <p>Los valores principales que puede coger son:</p>
         <ul>
             <li>stretch: Valor por defecto. Los elementos se estiran hasta rellenar el contenedor principal. No se
                 respeta la altura, ni altura mínima (height, height-min)
             </li>
-            <li>flex-start, flex-self-start. Los elementos se colocar al principio del eje transversal. Este efecto se
+            <li>flex-start, flex-self-start. Los elementos se colocan al principio del eje transversal. Este efecto se
                 aprecia cuando los elementos no ocupan todo el eje transversal.
             </li>
             <li>flex-end, flex-self-end: Los elementos se colocan al final del eje transversal. Este efecto se aprecia
                 cuando los elementos no ocupan todo el eje transversal.
             </li>
             <li>center: los elementos se colocan en el centro del eje transversal</li>
-            <li>baseline: Los elementos están alineados como sus líneas bases se alineas. Este efecto sólo se aprecia
+            <li>baseline: Los elementos estarán alineados con sus líneas bases. Este efecto solo se aprecia
                 cuando contiene texto.
             </li>
         </ul>
@@ -153,7 +159,7 @@
     <section>
         <p>Define la alineación de los elementos que se encuentra den contenedor a lo largo del eje transversal. </p>
         <p> Esta pensado para usarse con <strong>wrap</strong>(Salto), aunque también se puede utilizar con no-wrap.
-            Aunque podrá  entrar en conflicto con align-items.y este último tendrá prioridad sobre este.</p>
+            Aunque podrá entrar en conflicto con align-items, y este último tendrá prioridad sobre este.</p>
         <p>Los valores principales que se pueden elegir son:</p>
 
         <ul>
@@ -194,22 +200,25 @@
         order controla el orden en que aparecen en el contenedor flexible.</p>
     <p>Por defecto el valor es 0.</p>
     <h4>flex-grow</h4>
-    <p>Esto define la capacidad de crecimiento de un elemento flexible si <strong>es necesario</strong>. Acepta un valor sin unidades que
+    <p>Esto define la capacidad de crecimiento de un elemento flexible si <strong>es necesario</strong>. Acepta un valor
+        sin unidades que
         sirve como proporción. Determina qué cantidad de espacio disponible dentro del contenedor flexible debe ocupar
         el artículo.</p>
     <p>
-        Si todos los elementos se han flex-grow establecido en 1, el espacio restante en el contenedor se distribuirá por
+        Si todos los elementos se han flex-grow establecido en 1, el espacio restante en el contenedor se distribuirá
+        por
         igual a todos los hijos. Si uno de los hijos tiene un valor de 2, ese hijo ocuparía el doble de espacio que
-        cualquiera de los otros (o lo intentará, al menos, porque dependerá de que la propiedad de wrap se encuentre en nowrap
+        cualquiera de los otros (o lo intentará, al menos, porque dependerá de que la propiedad de wrap se encuentre en
+        nowrap
         y el ancho de los elementos contenedores no este definido).</p>
     <p>Su funcionamiento dependerá de flex wrap y de su anchura. Pues solo entrara en funcionamiento cuando sobrepase el
-    tamaño natura de su width y flew-wrap se encuentre en su posición por defecto nowrap</p>
-        <p>Por defecto el valor es 0. No es 1. Es decir que ocupará lo mínimo e indipensable.</p>
+        tamaño natura de su width y flew-wrap se encuentre en su posición por defecto nowrap</p>
+    <p>Por defecto el valor es 0. No es 1. Es decir que ocupará lo mínimo e indispensable.</p>
     <h4>flex-shrink</h4>
     <p>Esto define la capacidad de que un elemento flexible se encoja si es necesario.</p>
     <p>El valor por defecto es 1.</p>
     <p>Se produce cuando no entra en el contenedor principal y tiene que reducir su width natural por lo que funcionara
-    en acorde a la propiedad flex-wrap y width del propio elemento</p>
+        en acorde a la propiedad flex-wrap y width del propio elemento</p>
     <h4>flex-basic</h4>
     <p>Esto define el tamaño predeterminado de un elemento antes de que se distribuya el espacio restante.</p>
     <p>Puede ser un ancho expresado por una unidad o la palabra content, lo cual hará que se ajuste al contenido.</p>
@@ -218,8 +227,9 @@
     <p>Engloba las tres propiedades anteriores.</p>
     <h4>align-self</h4>
     <p>Date cuenta que float, clear and vertical-align no tienen ningún efecto sobre flex.</p>
-    <p>Esto permite anular la alineación predeterminada (o la especificada por align-items) para elementos flexibles individuales.</p>
-    <p>Funciona cuando la propiedad nowrap está marcada y tiene algun align-items diferente </p>
+    <p>Esto permite anular la alineación predeterminada (o la especificada por align-items) para elementos flexibles
+        individuales.</p>
+    <p>Funciona cuando la propiedad nowrap está marcada y tiene algún align-items diferente </p>
 </section>
 
 </body>

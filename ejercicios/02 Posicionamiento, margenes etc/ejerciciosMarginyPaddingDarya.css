@@ -1,0 +1,161 @@
+/* Ejercicio 1 */
+
+
+#primerEjecicio {
+    width: 150px;
+    height: 150px;
+    border: solid 5px black;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#primerEjecicio>div {
+    width: 50px;
+    height: 50px;
+    border: solid 5px red;
+}
+
+
+/* Ejercicio 2 */
+
+#segundoEjercicio {
+    width: 150px;
+    height: 150px;
+    outline: solid 3px black;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#segundoEjercicio>div:nth-child(1) {
+    height: 50%;
+    border: solid 3px chartreuse;
+}
+
+#segundoEjercicio>div:nth-child(2) {
+    height: 50%;
+    border: solid 3px red;
+}
+
+
+/* Ejercicio 3 */
+
+#tercerEjercicio {
+    width: 150px;
+    height: 150px;
+    outline: solid 3px black;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+#tercerEjercicio>div:nth-child(1) {
+    width: 50%;
+    border: solid 3px chartreuse;
+}
+
+#tercerEjercicio>div:nth-child(2) {
+    width: 50%;
+    border: solid 3px red;
+}
+
+
+/* Ejercicio 4 */
+
+#cuartoEjercicio {
+    box-sizing: border-box;
+    position:relative;
+    width: 150px;
+    height: 150px;
+    outline: solid 3px black;
+    margin: 0 auto;
+}
+
+#cuartoEjercicio>div:nth-child(1) {
+    width: 50%;
+    height: 50%;
+    position: relative;
+    float:left;
+    border: solid 3px chartreuse;
+}
+
+#cuartoEjercicio>div:nth-child(2) {
+    float:left;
+    width: 50%;
+    height: 50%;
+    border: solid 3px red;
+}
+
+#cuartoEjercicio>div:nth-child(3) {
+    position: relative;
+    float:left;
+    width: 50%;
+    height: 50%;
+    border: solid 3px red;
+}
+
+#cuartoEjercicio>div:nth-child(4) {
+    float: left;
+    width: 50%;
+    height: 50%;
+    border: solid 3px chartreuse;
+}
+
+
+/* Ejercicio 5 */
+
+#quintoEjercicio {
+    width: 400px;
+    height: 150px;
+    border: solid 3px black;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+#quintoEjercicio>div {
+    border: dotted 10px green;
+    width: 15%;
+}
+
+
+/* Ejercicio 7 */
+
+#octavoEjercicio {
+    width: 200px;
+    height: 150px;
+    outline: solid 3px black;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0 auto;/*Corrección*/
+}
+
+#octavoEjercicio>header {
+    background-color: dodgerblue;
+    text-align: center;
+    height: 25%;
+    width: 100%;
+}
+
+#octavoEjercicio>aside {
+    background-color: orange;
+    height: 50%;
+    width: 25%;
+}
+
+#octavoEjercicio>main {
+    background-color: coral;
+    height: 50%;
+    width: 75%;
+}
+
+#octavoEjercicio>footer {
+    background-color: mediumpurple;
+    height: 25%;
+    width: 100%;
+    margin:0;
+}

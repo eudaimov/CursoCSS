@@ -1,0 +1,221 @@
+.fondoNaranja{
+    background-color: orange;
+}
+.fondoGris{
+    background-color: grey;
+}
+.fondoGrisClaro{
+    background-color: lightgray;
+}
+body{
+    padding-bottom: 4rem;
+}
+
+#ejercicio1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1em;
+    margin: 0 auto;
+    width: 75%;
+    height: 300px;
+    align-items: flex-end;
+    padding: 1rem 2rem 0;
+}
+#ejercicio1 div{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color:white;
+    font-size: x-large;
+}
+#ejercicio1>div:first-child{
+    height: 50%;
+}
+#ejercicio1>div:nth-child(2n+2) {
+    height: 70%;
+}
+#ejercicio1>div:nth-child(3){
+    height: 100%;
+}
+
+#ejercicio1>div:last-child{
+    height: 10%;
+}
+#ejercicio2{
+    margin: 0 auto;
+    width: 75%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1rem 1rem 0;
+
+}
+#ejercicio2>div{
+    flex-basis: 20%;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1rem;
+    color:white;
+    font-size: x-large;
+    font-weight: bolder;
+}
+#ejercicio2>div:first-child{
+    width: 50%;
+}
+#ejercicio2>div:nth-child(2n+2){
+    width: 70%;
+}
+#ejercicio2>div:nth-child(3){
+    width: 100%;
+}
+
+#ejercicio2>div:last-child{
+    width: 10%;
+}
+
+#ejercicio3{
+    margin: 0 auto;
+    height: 300px;
+    display: flex;
+}
+#ejercicio3>div{
+    height: 100%;
+}
+#ejercicio3>div:first-child{
+    width: 30%;
+    box-sizing: border-box;
+    border-right: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-weight: bold;
+
+}
+hr{
+    width: 100%;
+}
+#ejercicio3>div:first-child>div:hover{
+    background-color: darkgray;
+}
+#ejercicio3>div:first-child>div{
+    width: 100%;
+    text-align: center;
+    padding-block: 0.5rem;
+}
+#ejercicio3>div:last-child{
+    width: 70%;
+    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow: hidden;
+    padding: 2rem;
+    text-overflow: ellipsis;
+}
+#ejercicio3>div:last-child p{
+    overflow: hidden;
+}
+#ejercicio4{
+    margin: 0 auto;
+    width: 70%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#ejercicio4 header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+    font-weight: bold;
+    height: 20%;
+}
+#ejercicio4 nav>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ejercicio4 li{
+    list-style: none;
+    margin: 0;
+    padding:1rem 2rem;
+}
+#ejercicio4 li:hover{
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: cornflowerblue;
+}
+#ejercicio4 main{
+    height: 60%;
+}
+
+#ejercicio5{
+    margin: 0 auto;
+    width: 70%;
+    height: 600px;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    overflow: auto;
+    padding: 2rem;
+    column-gap: 3rem;
+
+}
+#ejercicio5::-webkit-scrollbar{
+    -webkit-appearance: none;
+
+}
+#ejercicio5::-webkit-scrollbar:vertical {
+    width: 15px;
+}
+ #ejercicio5::-webkit-scrollbar-thumb {
+
+     background-color: rgba(0, 153, 255, 0.4);
+     border-radius: 8px;
+     border: 2px white solid;
+
+ }
+#ejercicio5::-webkit-scrollbar-track {
+    background: #ffffff;        /* color of the tracking area */
+    cursor: pointer;
+}
+#ejercicio5 .card{
+    width: 150px;
+    height: 200px;
+}
+#ejercicio5 .card .titleCard{
+    border-radius: 10px 10px 0 0 ;
+    background-color: deepskyblue;
+    font-size: 16pt;
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+}
+#ejercicio5 .card>.cuerpoCard{
+    background-color: white;
+    padding: 1rem 7px;
+}
+#ejercicio5 .card>.footerCard{
+    background-color: orange;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+
