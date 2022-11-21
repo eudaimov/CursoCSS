@@ -1,8 +1,9 @@
-@media print{
-    @page{
-        margin-block:2.5cm 2cm;
-
-    }
+body{
+    margin-block: 2rem;
+    margin-bottom: 300px;
+}
+li{
+    margin-top:1.5rem;
 }
 #primerEjecicio {
     margin: 0 auto;
@@ -194,4 +195,56 @@
     text-align: center;
     top: calc(50% - 9.666px);
 }
+
+#ejercicioNoveno{
+    margin-block:1rem;
+}
+.toolTipContenedor{
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+}
+.toolTipSuperior{
+
+    top:calc(-100% - 20px);
+    left:0;
+
+}
+.toolTip{
+    display: none;
+    position:absolute;
+    width: max-content;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.toolTipContenedor:hover .toolTip{
+    display: inline;
+
+}
+
+#ejercicioDecimo{
+    margin-block: 1rem;
+}
+
+.toolTipInferior{
+    top:calc(100%);
+    left:0;
+}
+
+
+#ejercicioUndecimo{
+    margin-top:1rem;
+}
+.toolTipImagen{
+    display: none;
+    position:absolute;
+}
+.toolTipContenedor:hover .toolTipImagen{
+    display: inline;
+}
+
+
 

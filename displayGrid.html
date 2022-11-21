@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>Display Grid</h1>
+<h2>Introducción</h2>
+<section>
+    <p>CSS Grid Layout (también conocido como "Grid" o "CSS Grid"), es un sistema de diseño bidimensional basado en
+        cuadrículas que, en comparación con cualquier sistema de diseño web del pasado, cambia por completo la forma en
+        que diseñamos las interfaces de usuario. CSS siempre se ha utilizado para diseñar nuestras páginas web, pero
+        nunca ha hecho un buen trabajo. Primero, usamos tablas, luego flotadores, posicionamiento y bloques en línea,
+        pero todos estos métodos eran esencialmente trucos y dejaban fuera muchas funciones importantes (centrado
+        vertical, por ejemplo). Flexbox también es una excelente herramienta de diseño, pero su flujo unidireccional
+        tiene diferentes casos de uso, y en realidad funcionan juntos.
+    </p>
+    <p>Grid es el primer módulo CSS creado específicamente para resolver los problemas de diseño que todos hemos estado
+        solucionando desde que creamos sitios web.</p>
+</section>
+<h2>Conceptos básicos</h2>
+<section>
+    <ul>
+        <li>Contenedor de cuadrícula</li>
+        <li>Filas y columnas</li>
+        <li>Celda</li>
+        <li>Tamaño de las columnas y las filas.</li>
+        <li>Tamaño o espacio de celda</li>
+        <li>Identificación de las celdas</li>
+        <li>Area de celdas</li>
+        <li>Espacio entre celdas</li>
+        <li>Alineación del contenedor</li>
+        <li>Alineación de las celdas</li>
+    </ul>
+    <p>Para comenzar, debe definir un elemento contenedor como una cuadrícula con display: grid, establecer los tamaños
+        de columna y fila con grid-template-columns y grid-template-rows, y luego colocar sus elementos secundarios en
+        la cuadrícula con grid-column y grid-row. </p>
+    <p>De manera similar a flexbox, el orden de origen de los elementos de la cuadrícula no importa. Su CSS puede
+        colocarlos en cualquier orden, lo que hace que sea muy fácil reorganizar su cuadrícula con consultas de medios.
+        Imagine definir el diseño de toda su página y luego reorganizarla por completo para adaptarse a un ancho de
+        pantalla diferente, todo con solo un par de líneas de CSS. Grid es uno de los módulos CSS más poderosos jamás
+        presentados.</p>
+</section>
+<h2>Propiedades de celda</h2>
+<section>
+    <h3>Propiedades del contenedor</h3>
+    <h4>display</h4>
+    <article>
+        <p>Define el elemento como un contenedor de cuadrícula y establece un nuevo contexto de formato de cuadrícula
+            para su contenido.</p>
+        <p class="code">display:grid/ inline-grid</p>
+        <ul>
+            <li>grid: Genera una cuadrícula a nivel de bloque</li>
+            <li>grid-inline: Genera una cuadrícula en una línea</li>
+        </ul>
+    </article>
+    <h4>grid-template</h4>
+    <article>
+        <p>Es una abreviatura para establecer grid-template-rows, grid-template-columnsy grid-template-areas en una sola
+            declaración.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>none – establece las tres propiedades en sus valores iniciales(rows, columns and area).</li>
+            <li>[grid-template-rows] / [grid-template-columns] – establece grid-template-columns y grid-template-rows a
+                los valores especificados, respectivamente, y establece grid-template-areas a none
+            </li>
+        </ul>
+        <p>Por ejemplo:</p>
+        <p class="code"></p>
+
+
+    </article>
+    <h4>grid-template-columns</h4>
+    <h4>grid-template-rows</h4>
+    <h4>grid-template-areas</h4>
+    <h4>grid-column-gap</h4>
+    <h4>grid-row-gap</h4>
+    <h4>grid-gap</h4>
+    <h4>justify-items</h4>
+    <h4>align-items</h4>
+    <h4>place-items</h4>
+    <h4>justify-content</h4>
+    <h4>align-content</h4>
+    <h4>place-content</h4>
+    <h4>grid-auto-columns</h4>
+    <h4>grid-auto-rows</h4>
+    <h4>grid-auto-flow</h4>
+    <h4>grid</h4>
+    <h3>Propiedades de las celdas</h3>
+</section>
+
+</body>
+</html>
