@@ -7,6 +7,7 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Display: Flex</title>
     <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/ejemplosDisplayFlex.css">
 </head>
 <body>
 <h1>Display: Flex</h1>
@@ -67,7 +68,7 @@
 </section>
 
 <h2>Propiedades</h2>
-<h3>Propiedades para el padre</h3>
+<h3>Propiedades para el Contenedor Flexible</h3>
 <section>
     <h4>display</h4>
     <p>Se define en el elemento contenedor del resto de elementos.</p>
@@ -85,6 +86,61 @@
         </ul>
     </section>
     <p class="code">flex-direction:column;</p>
+    <p>Por ejemplo:</p>
+    <div id="ejemplo-direction-row">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+    <p class="code">
+        #ejemplo-direction-row{
+            display: flex;
+            background-color: dodgerblue;
+            padding: 15px;
+            margin-inline: auto;
+            margin-block: 2rem;
+            width: 80%;
+        }
+       #ejemplo-direction-row>div{
+            width: 170px;
+            background-color: darkorange;
+            border-radius: 5px;
+            outline: red 2px solid;
+            height: 170px;
+            text-align: center;
+            line-height: 170px;
+        }
+    </p>
+    <div id="ejemplo-direction">
+        <div id="ejemplo-direction-column">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <p class="code">
+        #ejemplo-direction-column{
+            display: flex;
+            flex-direction: column;
+            background-color: dodgerblue;
+            padding: 15px;
+            margin-inline: auto;
+            margin-block: 2rem;
+            max-width: 200px;
+            height: 800px;
+        }
+        #ejemplo-direction-column>div{
+            width: 100%;
+            background-color: darkorange;
+            border-radius: 5px;
+            outline: red 2px solid;
+            height: 170px;
+            text-align: center;
+            line-height: 170px;
+        }
+    </p>
     <h4>flex-wrap</h4>
     <section>
         <p>Describen el comportamiento en el caso de que los elemento no entre por sus dimensiones en el eje principal.
@@ -104,6 +160,35 @@
         </ul>
         <p>Por ejemplo:</p>
         <p class="code">flex-wrap:wrap;</p>
+        <div id="ejemplo-wrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+        <p class="code">
+            #ejemplo-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                background-color: dodgerblue;
+                padding: 15px;
+                margin-inline: auto;
+                margin-block: 2rem;
+                width: 80%;
+            }
+            #ejemplo-wrap>div{
+                width: 170px;
+                height: 170px;
+                margin: 10px;
+                border-radius: 5px;
+                border: red 5px solid;
+                text-align: center;
+                line-height: 170px;
+                background-color: darkorange;
+            }
+        </p>
 
     </section>
     <h4>flex-flow</h4>
@@ -131,6 +216,61 @@
                 el cual será igual a la separación existente en el interior.
             </li>
         </ul>
+        <p>Por ejemplo:</p>
+        <div id="ejemplo-justify-row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p class="code">
+            #ejemplo-justify-row{
+                display: flex;
+                justify-content: center;
+                background-color: dodgerblue;
+                padding: 15px;
+                margin-inline: auto;
+                margin-block: 2rem;
+                width: 80%;
+            }
+            #ejemplo-justify-row>div{
+                width: 170px;
+                height: 170px;
+                margin: 10px;
+                border-radius: 5px;
+                border: red 5px solid;
+                text-align: center;
+                line-height: 170px;
+                background-color: darkorange;
+            }
+        </p>
+        <div id="ejemplo-justify-column">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p class="code">
+            #ejemplo-justify-column{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: dodgerblue;
+                padding: 15px;
+                margin-inline: auto;
+                margin-block: 2rem;
+                width: 80%;
+                height: 800px;
+            }
+            #ejemplo-justify-column>div{
+                width: 170px;
+                height: 170px;
+                margin: 10px;
+                border-radius: 5px;
+                border: red 5px solid;
+                text-align: center;
+                line-height: 170px;
+                background-color: darkorange;
+            }
+        </p>
     </section>
     <h4>align-items</h4>
     <section>
@@ -140,8 +280,11 @@
             Aunque entrará en conflicto con align-content, y este último tendrá prioridad sobre este.</p>
         <p>Los valores principales que puede coger son:</p>
         <ul>
-            <li>stretch: Valor por defecto. Los elementos se estiran hasta rellenar el contenedor principal. No se
-                respeta la altura, ni altura mínima (height, height-min)
+            <li>stretch: Valor por defecto. Los elementos se estiran hasta rellenar el contenedor principal. <br>
+                <strong>No funciona</strong>
+                si existe una altura marcada y la dirección es row y de la misma manera no funciona está propiedad si
+                los
+                elementos contenidos tienen una anchura marcada y la dirección es column.
             </li>
             <li>flex-start, flex-self-start. Los elementos se colocan al principio del eje transversal. Este efecto se
                 aprecia cuando los elementos no ocupan todo el eje transversal.
@@ -154,15 +297,75 @@
                 cuando contiene texto.
             </li>
         </ul>
+        <p>Por ejemplo:</p>
+        <div id="ejemplo-align-items-row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p class="code">
+            #ejemplo-align-items-row{
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                background-color: dodgerblue;
+                padding: 15px;
+                margin-inline: auto;
+                margin-block: 2rem;
+                width: 80%;
+                height: 800px;
+            }
+            #ejemplo-align-items-row>div{
+                width: 170px;
+                border-radius: 5px;
+                border: red 5px solid;
+                text-align: center;
+                line-height: calc(800px - 4rem);
+                background-color: darkorange;
+            }
+        </p>
+        <div id="ejemplo-align-items-column">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <p class="code">
+            #ejemplo-align-items-column{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: stretch;
+                background-color: dodgerblue;
+                padding: 15px;
+                margin-inline: auto;
+                margin-block: 2rem;
+                width: 80%;
+                height: 800px;
+
+            }
+            #ejemplo-align-items-column>div{
+                height: 170px;
+                border-radius: 5px;
+                border: red 5px solid;
+                text-align: center;
+                line-height: 170px;
+                background-color: darkorange;
+            }
+
+        </p>
     </section>
     <h4>align-content</h4>
     <section>
         <p>Define la alineación de los elementos que se encuentra den contenedor a lo largo del eje transversal. </p>
-        <p> Esta pensado para usarse con <strong>wrap</strong>(Salto), aunque también se puede utilizar con no-wrap.
-            Aunque podrá entrar en conflicto con align-items, y este último tendrá prioridad sobre este.</p>
+        <p> Esta pensado para usarse con <strong>wrap</strong>(Salto). No suele funcionar con la propiedad nowrap
+            activa.
+        </p>
         <p>Los valores principales que se pueden elegir son:</p>
 
         <ul>
+            <li>normal: Es el valor por defecto. Se distribuyen uniformemente en el caso de que haya varias lineas
+                cada línea ocupara el mismo espacio aunque los elementos no lo ocupen
+            </li>
             <li>start: Los elementos comienza a alinearse partiendo del principio del eje transversal</li>
             <li>center: Los elementos comienza a alinearse partiendo del centro del eje transversal</li>
             <li>end: Los elementos comienza a alinearse partiendo del final del eje transversal</li>
@@ -178,22 +381,123 @@
                 margen,
                 el cual será igual a la separación existente en el interior.
             </li>
+            <li>stretch:
+                Si el tamaño combinado de los elementos a lo largo del eje transversal es menor que el tamaño del
+                contenedor de alineación, el tamaño de los autoelementos de cualquier tamaño aumenta por igual (no
+                proporcionalmente), respetando las restricciones impuestas por max-height/ max-width(o funcionalidad
+                equivalente), por lo que que el tamaño combinado llene exactamente el contenedor de alineación a lo
+                largo del eje transversal. Muy parecido a mi entender al normal(Opinión particular). Su funcionamiento se comprende mejor
+                cuando en el eje transversal no tiene altura o anchura definida.
+            </li>
         </ul>
+        <p>Por ejemplo:</p>
+        <div id="ejemplo-align-content-center-row">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <p class="code">
+            #ejemplo-align-content-center-row{
+                margin: 0 auto;
+                width: 80%;
+                display:flex;
+                flex-wrap: wrap;
+                align-content: center;
+                height: 400px;
+                background-color: dodgerblue;
+                padding:15px;
+                overflow: hidden;
+            }
+            #ejemplo-align-content-center-row>div{
+                width: 170px;
+                height: 170px;
+                border-radius: 5px;
+                border:red 5px solid;
+                background-color: darkorange;
+                line-height: 170px;
+                text-align: center;
+            }
+        </p>
+        <div id="ejemplo-align-content-center-column">
+            <div>1</div>
+            <div>2</div>
+        </div>
+        <p class="code">
+            #ejemplo-align-content-center-column{
+                margin: 3rem auto;
+                width: 80%;
+                display:flex;
+                flex-flow: column wrap;
+                align-content: center;
+                height: 600px;
+                background-color: dodgerblue;
+                padding:15px;
+                overflow: hidden;
+            }
+            #ejemplo-align-content-center-column>div{
+                width: 170px;
+                height: 170px;
+                border-radius: 5px;
+                border:red 5px solid;
+                background-color: darkorange;
+                line-height: 170px;
+                text-align: center;
+            }
+        </p>
+
     </section>
     <h4>gap,row-gap, column-gap</h4>
-    <p>Estas propiedades influirán en los elementos contenidos dependiendo de justify-content, align-items,
-        align-content
-        y de la cantidad de filas y columnas producidas por el número de elementos contenidos.</p>
+
     <section>
+        <p>Estas propiedades influirán en los elementos contenidos dependiendo de justify-content, align-items,
+            align-content y de la cantidad de filas y columnas producidas por el número de elementos contenidos.</p>
         <ul>
             <li>gap: Es el espacio entre elementos.</li>
             <li>row-gap: Es el espacio entre filas.</li>
             <li>column-gap: Es el espacio entre columnas</li>
         </ul>
-
+        <p>Por ejemplo:</p>
+        <div id="ejemplo-gap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+        </div>
+        <p class="code">
+            #ejemplo-gap{
+                width:80%;
+                height: 300px;
+                margin:0 auto;
+                background-color: dodgerblue;
+                display: flex;
+                flex-flow: row wrap;
+                align-content: flex-start;
+                gap: 2rem;
+            }
+            #ejemplo-gap>div{
+                width: 100px;
+                height: 100px;
+                border: red 2px solid;
+                background-color: darkorange;
+                text-align: center;
+                line-height: 50px;
+            }
+        </p>
     </section>
 </section>
-<h3>Propiedades de los hijos</h3>
+<h3>Propiedades de los elementos flexibles.</h3>
 <section>
     <h4>order</h4>
     <p>De forma predeterminada, los elementos flexibles se presentan en el orden de origen. Sin embargo, la propiedad

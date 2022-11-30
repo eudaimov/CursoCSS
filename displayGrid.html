@@ -7,6 +7,114 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Grid</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .container {
+            width: 50vw;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas:
+            "header header header header"
+            "main main .  sidebar"
+            "footer footer footer footer";
+            text-align: center;
+        }
+
+        .item-1 {
+            grid-area: header;
+            background-color: orange;
+        }
+
+        .item-2 {
+            grid-area: main;
+            background-color: dodgerblue;
+        }
+
+        .item-3 {
+            grid-area: sidebar;
+            background-color: orangered;
+        }
+
+        .item-4 {
+            background-color: limegreen;
+            grid-area: footer;
+        }
+
+        .item {
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding-block: 1rem;
+        }
+        #ejemploGap {
+            margin: 0 auto;
+            width: 50vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            outline: 5px solid dodgerblue;
+        }
+
+        .itemGap {
+            background-color: darkorange;
+            border-radius: 5px;
+            border: 2px solid gray;
+            padding: 1rem;
+        }
+        #ejemploJustifyItems {
+            width: 50vw;
+            height: 300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            outline: 4px dodgerblue solid;
+            justify-items: center;
+            row-gap: 10px;
+
+        }
+
+        .itemJustify {
+            background-color: darkorange;
+            border-radius: 5px;
+            border: 2px solid black;
+            padding-inline: 1rem;
+        }
+        #ejemploJustifyContent{
+            margin: 0 auto;
+            height: 33Vh;
+            width: 50vw;
+            outline: 3px dodgerblue solid;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3,1fr);
+            justify-content:end;
+        }
+        .itemJustifyContent{
+            background-color: darkorange;
+            border: 2px solid gray;
+            border-radius: 10px;
+        }
+        #ejemploAlignItems {
+            margin: 0 auto;
+            width: 50vh;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            outline: 3px dodgerblue solid;
+            align-items: start;
+            column-gap: 10px;
+        }
+
+        .itemAlignItems {
+            background-color: darkorange;
+            padding: 1rem;
+            border: 2px solid gray;
+        }
+    </style>
 </head>
 <body>
 <h1>Display Grid</h1>
@@ -70,22 +178,341 @@
                 los valores especificados, respectivamente, y establece grid-template-areas a none
             </li>
         </ul>
+        <p>Ver como funciona cada una de las propiedades en particular: grig-template-columns, grid-template-rows y
+            grid-template-areas</p>
         <p>Por ejemplo:</p>
-        <p class="code"></p>
-
-
+        <p class="code">
+            grid-template:
+            [row1-start] "header header header" 25px [row1-end]
+            [row2-start] "footer footer footer" 25px [row2-end]
+            / auto 50px auto;
+        </p>
+        <p>Y equivale a:</p>
+        <p class="code">
+            grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+            grid-template-columns: auto 50px auto;
+            grid-template-areas:
+            "header header header"
+            "footer footer footer";
+        </p>
     </article>
     <h4>grid-template-columns</h4>
+    <article>
+        <p>Define las columnas existentes en el grid con una lista de valores separados por espacio.</p>
+        <p>Los valores pueden representar los nombres de las columnas o el tamaño de las columnas.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>nombre de línea:
+                <p>
+                    Van entre corchetes y puede tener un nombre compuesto separado por guiones o incluso varios nombres
+                    separado por espacio.
+                </p>
+                <p>
+                    Los nombres pueden ser identificadores <strong>no</strong> únicos. Y no son obligatorios, si no
+                    asignamos ningún nombre se puede identificar las líneas de columnas por los números que se asignaran
+                    automáticamente empezando por el 1 o negativos empezando por la cantidad negativa de columnas siendo
+                    la última -1.
+                </p>
+                <p>
+                    Si varias líneas comparten el mismo nombre, se puede hacer referencia a ellas por su nombre de línea
+                    y número.
+                </p>
+            </li>
+            <li>tamaño de columna:
+                <p> Puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula usando la fr
+                    unidad</p>
+                <p>Es obligatorio.</p>
+                <p>La fr unidad le permite establecer el tamaño de una pista como una fracción del espacio libre del
+                    contenedor de cuadrícula. Por ejemplo, esto establecerá cada elemento en un tercio del ancho del
+                    contenedor de la cuadrícula:</p>
+                <p class="code">grid-template-columns: 1fr 1fr 1fr</p>
+                <p>El espacio libre se calcula después de cualquier elemento no flexible.</p>
+            </li>
+        </ul>
+        <p>Si su definición contiene partes repetidas, puede usar la repeat() notación para simplificar las cosas:</p>
+        <p class="code">grid-template-columns: repeat(3, 20px [col-start]);</p>
+        <p>Que es equivalente a:</p>
+        <p class="code">grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start];</p>
+    </article>
     <h4>grid-template-rows</h4>
+    <article>
+        <p>Define las filas existentes en el grid con una lista de valores separados por espacio.</p>
+        <p>Los valores pueden representar los nombres de las filas o el tamaño de las filas.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>nombre de línea:
+                <p>
+                    Van entre corchetes y puede tener un nombre compuesto separado por guiones o incluso varios nombres
+                    separado por espacio.
+                </p>
+                <p>
+                    Los nombres pueden ser identificadores <strong>no</strong> únicos. Y no son obligatorios, si no
+                    asignamos ningún nombre se puede identificar las líneas de columnas por los números que se asignaran
+                    automáticamente empezando por el 1 o negativos empezando por la cantidad negativa de columnas siendo
+                    la última -1.
+                </p>
+                <p>
+                    Si varias líneas comparten el mismo nombre, se puede hacer referencia a ellas por su nombre de línea
+                    y número.
+                </p>
+            </li>
+            <li>tamaño de fila:
+                <p> Puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula usando la fr
+                    unidad</p>
+                <p>Es obligatorio.</p>
+                <p>La fr unidad le permite establecer el tamaño de una pista como una fracción del espacio libre del
+                    contenedor de cuadrícula. Por ejemplo, esto establecerá cada elemento en un tercio del ancho del
+                    contenedor de la cuadrícula:</p>
+                <p class="code">grid-template-rows:1fr 1fr 1fr</p>
+                <p>El espacio libre se calcula después de cualquier elemento no flexible.</p>
+            </li>
+        </ul>
+        <p>Si su definición contiene partes repetidas, puede usar la repeat() notación para simplificar las cosas:</p>
+        <p class="code">grid-template-columns: repeat(3, 20px [col-start]);</p>
+        <p>Que es equivalente a:</p>
+        <p class="code">grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start];</p>
+    </article>
     <h4>grid-template-areas</h4>
-    <h4>grid-column-gap</h4>
-    <h4>grid-row-gap</h4>
-    <h4>grid-gap</h4>
+    <article>
+        <p>Define una plantilla de cuadrícula haciendo referencia a los nombres de las áreas de cuadrícula que se
+            especifican con la grid-area propiedad. Repetir el nombre de un área de cuadrícula hace que el contenido
+            abarque esas celdas. Un punto significa una celda vacía. <strong>La sintaxis en sí proporciona una
+                visualización de la estructura de la cuadrícula.</strong></p>
+        <p>Valores:</p>
+        <ul>
+            <li>el nombre de un área de cuadrícula especificada con grid-area</li>
+            <li>. – un punto significa una celda de cuadrícula vacía</li>
+            <li>none – no se definen áreas de cuadrícula</li>
+        </ul>
+        <p>Ejemplo:</p>
+        <p class="code">
+            .container {
+                width: 50vw;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas:
+                "header header header header"
+                "main main . sidebar"
+                "footer footer footer footer";
+                text-align: center;
+            }
+            .item-1 {
+                grid-area: header;
+                background-color: orange;
+            }
+            .item-2 {
+                grid-area: main;
+                background-color: dodgerblue;
+            }
+            .item-3 {
+                grid-area: sidebar;
+                background-color: orangered;
+            }
+            .item-4 {
+                background-color: limegreen;
+                grid-area: footer;
+            }
+            .item{
+                border: 1px solid gray;
+                border-radius: 5px;
+                padding-block: 1rem;
+            }
+        </p>
+        <p>Eso creará una cuadrícula de cuatro columnas de ancho por tres filas de alto. Toda la fila superior estará
+            compuesta por el área del encabezado . La fila del medio estará compuesta por dos áreas principales , una
+            celda vacía y un área de barra lateral . La última fila es todo pie de página .</p>
+
+        <div class="container">
+            <div class="item-1 item">HEADER</div>
+            <div class="item-2 item">MAIN</div>
+            <div class="item-3 item">SIDEBAR</div>
+            <div class="item-4 item">FOOTER</div>
+        </div>
+        <p style="margin-top:1rem">Cada fila de su declaración debe tener el mismo número de celdas.</p>
+
+        <p>Puede usar cualquier número de puntos adyacentes para declarar una sola celda vacía. Siempre que los puntos
+            no tengan espacios entre ellos, representan una sola celda.</p>
+
+        <p>Tenga en cuenta que no está nombrando líneas con esta sintaxis, solo áreas. Cuando usa esta sintaxis, las
+            líneas en cada extremo de las áreas en realidad se nombran automáticamente. Si el nombre de su área de cuadrícula
+            es foo , el nombre de la línea de fila inicial y la línea de columna inicial del área será foo -start , y el
+            nombre de su última línea de fila y última línea de columna será foo -end . Esto significa que algunas líneas
+            pueden tener varios nombres, como la línea del extremo izquierdo en el ejemplo anterior, que tendrá tres nombres:
+            inicio de encabezado, inicio principal e inicio de pie de página.</p>
+
+    </article>
+    <h4>grid-column-gap & grid-row-gap</h4>
+    <article>
+        <p>Especifica el tamaño de las líneas de la cuadrícula. Puede pensar en ello como establecer el ancho de los
+            canalones entre las columnas/filas.</p>
+        <p>Los canalones solo se crean entre las columnas/filas, no en los bordes exteriores.</p>
+        <p>La propiedad puede grip-column-gap o column-gap(denominación más moderna), grip-row-gap o
+            row-gap(denominación más moderna). Las propiedades sin prefijo ya son compatibles con Chrome 68+, Safari
+            11.2 Release 50+ y Opera 54+.</p>
+
+        <p>Por ejemplo:</p>
+
+        <p class="code">
+            #ejemploGap{
+            margin: 0 auto ;
+            width: 50vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            outline: 5px solid dodgerblue;
+            }
+            .itemGap{
+            background-color: darkorange;
+            border-radius:5px;
+            border: 2px solid gray;
+            padding: 1rem;
+            }
+        </p>
+        <div id="ejemploGap">
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+            <div class="itemGap"></div>
+        </div>
+
+    </article>
+    <h4>grid-gap o gap.</h4>
+    <article>
+        <p>Es la abreviatura de row-gap y column-gap.</p>
+        <p>Se escribe un sólo valor tanto para el columna como para el gap o dos valores.</p>
+        <p>Si se escriben dos valores, primero se escribe el valor de la fila(row) seguido y separado por un espacio
+            del valor de la columna (column)</p>
+        <p class="code">gap: 10px 20px</p>
+    </article>
     <h4>justify-items</h4>
+    <article>
+        <p>Alinea los elementos de la cuadrícula a lo largo del eje en línea (fila) (a diferencia de align-items lo que
+            se alinea a lo largo del eje del bloque (columna) ). Este valor se aplica a todos los elementos de la
+            cuadrícula dentro del contenedor.</p>
+        <p>Se suele utilizar cuando las unidades utilizadas en grid-template-columns son fr sino se utiliza
+            justify-content</p>
+        <p>Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la
+            justify-self propiedad.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>stretch – llena toda el ancho de la celda (este es el valor predeterminado)</li>
+            <li>start – alinea los elementos para que queden al ras con el borde inicial de su celda</li>
+            <li>end – alinea los elementos para que queden al ras con el borde final de su celda</li>
+            <li>center – alinea los elementos en el centro de su celda</li>
+        </ul>
+
+        <p>Ejemplo:</p>
+
+        <p class="code">
+            #ejemploJustifyItems{
+            width: 50vw;
+            height: 300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ;
+            grid-template-rows: repeat(3, 1fr);
+            outline: 4px dodgerblue solid;
+            justify-items: center;
+            row-gap: 10px;
+            }
+            .itemJustify{
+            background-color: darkorange;
+            border-radius: 5px;
+            border: 2px solid black;
+            padding-inline: 1rem;
+            }
+        </p>
+        <div id="ejemploJustifyItems">
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+            <div class="itemJustify"></div>
+        </div>
+    </article>
     <h4>align-items</h4>
+    <article>
+        <p>Alinea los elementos de la cuadrícula a lo largo del eje vertical (columna/bloque) (a diferencia de
+            justify-items
+            lo que se alinea a lo largo del eje horizontal (fila/línea). Este valor se aplica a todos los elementos de
+            la
+            cuadrícula dentro del contenedor.</p>
+        <p>Se suele utilizar cuando las unidades utilizadas en grid-template-rows son fr sino se utiliza
+            align-content</p>
+        <p>Este comportamiento también se puede establecer en elementos de cuadrícula individuales a través de la
+            align-self propiedad.</p>
+        <p>Ejemplo:</p>
+
+        <p class="code">
+            #ejemploAlignItems{
+            margin: 0 auto;
+            width: 50vh;
+            height: 300px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            outline: 3px dodgerblue solid;
+            align-items: start;
+            column-gap: 10px;
+            }
+            .itemAlignItems{
+            background-color: darkorange;
+            padding: 1rem;
+            border: 2px solid gray;
+            }
+        </p>
+        <div id="ejemploAlignItems">
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+            <div class="itemAlignItems"></div>
+        </div>
+    </article>
     <h4>place-items</h4>
+    <article>
+        <p>Es una propiedad abreviada. Establece las propiedades align-items y justify-items en una sola
+            declaración.</p>
+        <p> El primer valor establece align-items, el segundo valor justify-items. Si se omite el segundo valor, el
+            primer valor se asigna a ambas propiedades.</p>
+    </article>
     <h4>justify-content</h4>
-    <h4>align-content</h4>
+    <article>
+        <p>A veces, el tamaño total de su cuadrícula puede ser menor que el tamaño de su contenedor de cuadrícula. Esto
+            podría suceder si todos los elementos de la cuadrícula tienen el tamaño de unidades no flexibles como px. En
+            este caso, puede establecer la alineación de la cuadrícula dentro del contenedor de la cuadrícula. Esta
+            propiedad alinea la cuadrícula a lo largo del eje en línea (fila) </p>
+        <p>Por ejemplo:</p>
+
+        <div id="ejemploJustifyContent">
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+            <div class="itemJustifyContent"></div>
+        </div>
+    </article>
     <h4>place-content</h4>
     <h4>grid-auto-columns</h4>
     <h4>grid-auto-rows</h4>
