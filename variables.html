@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variables personalizadas</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+
+</head>
+<body>
+<h1>Variables CSS o Propiedades personalizadas CSS</h1>
+<h2>Introducción</h2>
+<section>
+    <p>A menudo se las denomina "Variables CSS", pero ese no es su nombre real son propiedades personalizadas CSS
+        "Custom Properties"</p>
+    <p>La variable son valores que se utilizan para no repetirse en este caso se podría considerar más una constante,
+    pero temas de discusión aparte, se utiliza mucho para hacer un código css mucho más legible y comprensible.</p>
+</section>
+<h2>Creación</h2>
+<section>
+    <p>Se inicia a través de un nombre antecedido de dos guiones dos puntos y un valor. Además, debe de estar siempre
+    dentro de un selector. El selector elegido es de vital importancia pues determinara la especificidad o universalidad
+    de su uso.</p>
+    <p>No debe contener caracteres especiales como &, @, ^, /</p>
+    <p>Por ejemplo:</p>
+    <p class="code">--colorRojo: #FF0000;</p>
+    <p>Se pueden utilizar como valor de una variable otra variable ya declarada. Por ejemplo</p>
+    <p class="code">
+        html {
+        --red: #a24e34;
+        --green: #01f3e6;
+        --yellow: #f0e765;
+
+        --error: var(--red);
+        --errorBorder: 1px dashed var(--red);
+        --ok: var(--green);
+        --warning: var(--yellow);
+        }
+    </p>
+</section>
+<h2>Uso o referencia</h2>
+<section>
+    <p>Para hacer uso de una variable ya inicializada se debe usar la función var().</p>
+    <p>Por ejemplo:</p>
+    <p class="code">
+        :root{
+            --colorAzul:#0000AA;
+            background-color:var(--colorAzul);
+        }
+    </p>
+    <p>Cabe destacar que si tuviéramos una variable inicializada en dos puntos diferentes y con valores diferentes el
+    valor tomado sigue la filosofía de la cascada. Golpea o tiene efecto sobre el elemento el que más abajo o cerca se
+    encuentra de este.</p>
+    <p>También podemos destacar que si la variable no ha sido inicializa o no se encuentra disponible podemos dar un
+     valor en caso de ausencia. Por ejemplo:</p>
+    <p class="code">
+        :root{
+            --colorAmarillo:#FF00FF;
+        }
+        p{
+            color:var(--colorAmarillo, #AA00AA)
+        }
+    </p>
+</section>
+<h2>Global versus local, Dinámico frente a estática.</h2>
+<section>
+    <p>En este apartado se pretende discutir el uso y la localización de la inicialización de las variables. Frecuentemente,
+    se suele utilizar el selector (:root) que equivale al selector html, pero en caso de conflicto tendrá prioridad el primero
+    sobre el último.</p>
+</section>
+
+<h2>Ventajas de usar variables:</h2>
+<section>
+    <ul>
+        <li>Código más comprensible y legible.</li>
+        <li>Los cambios en el código son mucho más rápidos.</li>
+    </ul>
+</section>
+
+<h2>Sobre escritura de variables</h2>
+   <p>Una variable global que aparezca en el selector <code>:root</code> se puede sobreescribir en uno de sus hijos.</p>
+
+<h2>Uso de variables en media-queries.</h2>
+<section>
+    <p>Un ejemplo vale más que mil palabras:</p>
+    <p class="code">
+        :root {
+        --blue: #1e90ff;
+        --white: #ffffff;
+        }
+
+        .container {
+        --fontsize: 25px;
+        }
+
+        /* Styles */
+        body {
+        background-color: var(--blue);
+        }
+
+        h2 {
+        border-bottom: 2px solid var(--blue);
+        }
+
+        .container {
+        color: var(--blue);
+        background-color: var(--white);
+        padding: 15px;
+        font-size: var(--fontsize);
+        }
+
+        @media screen and (min-width: 450px) {
+        .container {
+        --fontsize: 50px;
+        }
+        }
+    </p>
+</section>
+</body>
+</html>
