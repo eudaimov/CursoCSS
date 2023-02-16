@@ -175,7 +175,8 @@
         <ul>
             <li>none – establece las tres propiedades en sus valores iniciales(rows, columns and area).</li>
             <li>[grid-template-rows] / [grid-template-columns] – establece grid-template-columns y grid-template-rows a
-                los valores especificados, respectivamente, y establece grid-template-areas a none
+                los valores especificados, respectivamente, y establece grid-template-areas entre comillas en la zona
+                del grid-template-rows
             </li>
         </ul>
         <p>Ver como funciona cada una de las propiedades en particular: grig-template-columns, grid-template-rows y
@@ -185,15 +186,110 @@
             grid-template:
             [row1-start] "header header header" 25px [row1-end]
             [row2-start] "footer footer footer" 25px [row2-end]
-            / auto 50px auto;
+            / auto 100px auto;
         </p>
+        <style>
+           #ejemplo1{
+               border-top:1px solid black;
+               border-right: 1px solid black;
+               margin-inline: 2rem;
+               display: grid;
+               grid-template:  [row1-start] "header header header" 25px [row1-end]
+                    [row2-start] "footer footer footer" 25px [row2-end]
+                    / auto 100px auto;
+           }
+           #ejemplo1>div{
+               box-sizing: border-box;
+               margin:0;
+               padding:0;
+               text-align: center;
+               border-bottom: 1px solid black;
+               border-left: 1px solid black;
+           }
+        </style>
+        <div id="ejemplo1">
+            <div>Header</div>
+            <div>Header</div>
+            <div>Header</div>
+            <div>Footer</div>
+            <div>Footer</div>
+            <div>Footer</div>
+        </div>
         <p>Y equivale a:</p>
         <p class="code">
             grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
-            grid-template-columns: auto 50px auto;
+            grid-template-columns: auto 100px auto;
             grid-template-areas:
             "header header header"
             "footer footer footer";
+        </p>
+        <p>Si tienes problemas con bordes dobles en la intersecciones, un truco que a mi me funciona es dar un
+            border-top y border-right al contenedoer y un border-botton y border-left a los elementos contenidos.</p>
+    </article>
+    <h4>grid-template-rows</h4>
+    <article>
+        <p>Define las filas existentes en el grid con una lista de valores separados por espacio.</p>
+        <p>Los valores pueden representar los nombres de las filas o el tamaño de las filas.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>nombre de línea:
+                <p>
+                    Van entre corchetes y puede tener un nombre compuesto separado por guiones o incluso varios nombres
+                    separado por espacio.
+                </p>
+                <p>
+                    Los nombres pueden ser identificadores <strong>no</strong> únicos. Y no son obligatorios, si no
+                    asignamos ningún nombre se puede identificar las líneas de columnas por los números que se asignaran
+                    automáticamente empezando por el 1 o negativos empezando por la cantidad negativa de columnas siendo
+                    la última -1.
+                </p>
+                <p>
+                    Si varias líneas comparten el mismo nombre, se puede hacer referencia a ellas por su nombre de línea
+                    y número.
+                </p>
+            </li>
+            <li>tamaño de fila:
+                <p> Puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula usando la fr
+                    unidad</p>
+                <p>Es obligatorio.</p>
+                <p>La fr unidad le permite establecer el tamaño de una pista como una fracción del espacio libre del
+                    contenedor de cuadrícula. Por ejemplo, esto establecerá cada elemento en un tercio del ancho del
+                    contenedor de la cuadrícula:</p>
+                <p class="code">grid-template-rows:1fr 1fr 1fr</p>
+                <p>El espacio libre se calcula después de cualquier elemento no flexible.</p>
+            </li>
+        </ul>
+        <p>Ejemplos:</p>
+        <style>
+            #ejemplo2{
+                margin:1rem 2rem;
+                display: grid;
+                grid-template-rows: [primeraFila]1fr [segundaFila] 3fr;
+                border-left: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+            #ejemplo2>div{
+                border-right: 1px solid black;
+                border-top: 1px solid black;
+            }
+        </style>
+        <div id="ejemplo2">
+            <div>Celda1</div>
+            <div>Celda2</div>
+            <div>Celda3</div>
+        </div>
+        <p class="code">
+            #ejemplo2{
+            margin:1rem 2rem;
+            display: grid;
+            grid-template-rows: [primeraFila]1fr [segundaFila] 3fr ;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            }
+            #ejemplo2>div{
+            border-right: 1px solid black;
+            border-top: 1px solid black;
+            }
         </p>
     </article>
     <h4>grid-template-columns</h4>
@@ -232,46 +328,9 @@
         <p>Si su definición contiene partes repetidas, puede usar la repeat() notación para simplificar las cosas:</p>
         <p class="code">grid-template-columns: repeat(3, 20px [col-start]);</p>
         <p>Que es equivalente a:</p>
-        <p class="code">grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start];</p>
+        <p class="code">grid-template-columns: [col-start] 20px [col-start] 20px [col-start]20px;</p>
     </article>
-    <h4>grid-template-rows</h4>
-    <article>
-        <p>Define las filas existentes en el grid con una lista de valores separados por espacio.</p>
-        <p>Los valores pueden representar los nombres de las filas o el tamaño de las filas.</p>
-        <p>Valores:</p>
-        <ul>
-            <li>nombre de línea:
-                <p>
-                    Van entre corchetes y puede tener un nombre compuesto separado por guiones o incluso varios nombres
-                    separado por espacio.
-                </p>
-                <p>
-                    Los nombres pueden ser identificadores <strong>no</strong> únicos. Y no son obligatorios, si no
-                    asignamos ningún nombre se puede identificar las líneas de columnas por los números que se asignaran
-                    automáticamente empezando por el 1 o negativos empezando por la cantidad negativa de columnas siendo
-                    la última -1.
-                </p>
-                <p>
-                    Si varias líneas comparten el mismo nombre, se puede hacer referencia a ellas por su nombre de línea
-                    y número.
-                </p>
-            </li>
-            <li>tamaño de fila:
-                <p> Puede ser una longitud, un porcentaje o una fracción del espacio libre en la cuadrícula usando la fr
-                    unidad</p>
-                <p>Es obligatorio.</p>
-                <p>La fr unidad le permite establecer el tamaño de una pista como una fracción del espacio libre del
-                    contenedor de cuadrícula. Por ejemplo, esto establecerá cada elemento en un tercio del ancho del
-                    contenedor de la cuadrícula:</p>
-                <p class="code">grid-template-rows:1fr 1fr 1fr</p>
-                <p>El espacio libre se calcula después de cualquier elemento no flexible.</p>
-            </li>
-        </ul>
-        <p>Si su definición contiene partes repetidas, puede usar la repeat() notación para simplificar las cosas:</p>
-        <p class="code">grid-template-columns: repeat(3, 20px [col-start]);</p>
-        <p>Que es equivalente a:</p>
-        <p class="code">grid-template-columns: 20px [col-start] 20px [col-start] 20px [col-start];</p>
-    </article>
+
     <h4>grid-template-areas</h4>
     <article>
         <p>Define una plantilla de cuadrícula haciendo referencia a los nombres de las áreas de cuadrícula que se
