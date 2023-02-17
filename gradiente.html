@@ -86,8 +86,15 @@
   <h2>Gradientes Radiales</h2>
   <article>
     <p>Se define desde su centro por lo que no hay marcar ninguna dirección.</p>
+    <p>Por ejemplo:</p>
+    <p class="code">background-image: radial-gradient(red, yellow, green);</p>
     <p>Al igual que linear-gradient se necesita al menos dos colores de transición.</p>
-    <p>Se puede elegir entre dos formas de transición: elipse o círculo. El valor por defecto es la elipse.</p>
+    <p>Se puede elegir entre dos formas de transición: elipse o círculo. El valor por defecto es la elipse, por lo que
+    no es necesario determinarlo</p>
+    <p>Por ejemplo:</p>
+    <p class="code">
+      background-image: radial-gradient(circle, red, yellow, green);
+    </p>
     <p>Se puede también establecer porcentajes.</p>
     <p>También se puede utilizar diferentes tamaños del suavizado:</p>
     <ul>
@@ -98,7 +105,25 @@
     </ul>
   </article>
   <h2>Gradientes Cónicos</h2>
-
+  <article>
+    <p>Un degradado cónico es un degradado con transiciones de color giradas alrededor de un punto central.</p>
+    <p>Por ejemplo:</p>
+    <p class="code"> background-image: conic-gradient(red, yellow, green);</p>
+    <div style="margin-inline:2.5rem; width: 100px; height: 100px; background-image: conic-gradient(red,yellow,green)"></div>
+    <p>Se pueden definir limites exactos para zonas de los colores: Por ejemplo:</p>
+    <p class="code"> background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);</p>
+    <div style="margin-inline: 2.5rem; width:100px; height: 100px; border-radius: 50px;
+          background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg,
+          blue 270deg)"></div>
+    <p>También se puede determinar El ángulo desde el que gira todo el gradiente cónico. por defecto el ángulo 0 es que
+    comienza a las 12 en un reloj.</p>
+    <p>Si queremos que comience a las 3 (en un reloj) deberiamos poner lo siguiente.</p>
+    <p class="code">background-image: conic-gradient(from 90deg, red, yellow, green);</p>
+    <p>Tambien podemos desplazar el centro, por ejemplo</p>
+    <p class="code">background-image: conic-gradient(at 60% 45%, red, yellow, green);</p>
+    <p>También al igual que conic y linear podemos repetir patrones de gradiente con:</p>
+    <p class="code">background-image:repeating-conic-gradient(red 10%, yellow 20%);</p>
+  </article>
 </article>
 </body>
 </html>
