@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listados CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Listados</h1>
+<h2>Marcadores en listas predefinidos</h2>
+<article>
+    <p>Se realiza sobre el elemento ul o ol</p>
+    <p>Con la propiedad list-style-type</p>
+    <p>Los diferentes tipos son:</p>
+    <ul>
+        <li>list-style-type:none</li>
+        <li>list-style-type:circle(Por defecto)</li>
+        <li>list-style-type:square</li>
+        <li>list-style-type:upper-roman</li>
+        <li>list-style-type:lower-alpha</li>
+    </ul>
+</article>
+<h2>Marcadores de imágen personalidos</h2>
+<article>
+    <p>Se realiza con la propiedad list-style-image</p>
+    <p>Por ejemplo:</p>
+    <p class="code">ul{
+            list-style-image:url("marcador.png");
+        }
+    </p>
+</article>
+<h2>Posición de los marcadores</h2>
+<article>
+    <p>Existen únicamente dos posiciones y se marcar bajo la propiedad list-style-type:</p>
+    <p>Las dos propiedades son:</p>
+    <ul>
+        <li>inside (Valor por defecto)</li>
+        <li>outside</li>
+    </ul>
+</article>
+<h2>Propiedad abreviada o resumida.</h2>
+<article>
+    <p>Incluye las tres propiedades anteriores en una sola. (type, position, image)</p>
+    <p>Se utiliza la propiedad list-style:</p>
+    <p>Por ejemplo:</p>
+    <p class="code">list-style: square outside url("marcador.png");</p>
+</article>
+</body>
+</html>

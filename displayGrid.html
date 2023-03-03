@@ -167,65 +167,7 @@
             <li>grid-inline: Genera una cuadrícula en una línea</li>
         </ul>
     </article>
-    <h4>grid-template</h4>
-    <article>
-        <p>Es una abreviatura para establecer grid-template-rows, grid-template-columnsy grid-template-areas en una sola
-            declaración.</p>
-        <p>Valores:</p>
-        <ul>
-            <li>none – establece las tres propiedades en sus valores iniciales(rows, columns and area).</li>
-            <li>[grid-template-rows] / [grid-template-columns] – establece grid-template-columns y grid-template-rows a
-                los valores especificados, respectivamente, y establece grid-template-areas entre comillas en la zona
-                del grid-template-rows
-            </li>
-        </ul>
-        <p>Ver como funciona cada una de las propiedades en particular: grig-template-columns, grid-template-rows y
-            grid-template-areas</p>
-        <p>Por ejemplo:</p>
-        <p class="code">
-            grid-template:
-            [row1-start] "header header header" 25px [row1-end]
-            [row2-start] "footer footer footer" 25px [row2-end]
-            / auto 100px auto;
-        </p>
-        <style>
-           #ejemplo1{
-               border-top:1px solid black;
-               border-right: 1px solid black;
-               margin-inline: 2rem;
-               display: grid;
-               grid-template:  [row1-start] "header header header" 25px [row1-end]
-                    [row2-start] "footer footer footer" 25px [row2-end]
-                    / auto 100px auto;
-           }
-           #ejemplo1>div{
-               box-sizing: border-box;
-               margin:0;
-               padding:0;
-               text-align: center;
-               border-bottom: 1px solid black;
-               border-left: 1px solid black;
-           }
-        </style>
-        <div id="ejemplo1">
-            <div>Header</div>
-            <div>Header</div>
-            <div>Header</div>
-            <div>Footer</div>
-            <div>Footer</div>
-            <div>Footer</div>
-        </div>
-        <p>Y equivale a:</p>
-        <p class="code">
-            grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
-            grid-template-columns: auto 100px auto;
-            grid-template-areas:
-            "header header header"
-            "footer footer footer";
-        </p>
-        <p>Si tienes problemas con bordes dobles en la intersecciones, un truco que a mi me funciona es dar un
-            border-top y border-right al contenedoer y un border-botton y border-left a los elementos contenidos.</p>
-    </article>
+
     <h4>grid-template-rows</h4>
     <article>
         <p>Define las filas existentes en el grid con una lista de valores separados por espacio.</p>
@@ -298,7 +240,7 @@
         <p>Los valores pueden representar los nombres de las columnas o el tamaño de las columnas.</p>
         <p>Valores:</p>
         <ul>
-            <li>nombre de línea:
+            <li>nombre de la columna:
                 <p>
                     Van entre corchetes y puede tener un nombre compuesto separado por guiones o incluso varios nombres
                     separado por espacio.
@@ -325,6 +267,46 @@
                 <p>El espacio libre se calcula después de cualquier elemento no flexible.</p>
             </li>
         </ul>
+        <p>Por ejemplo:</p>
+        <style>
+            #ejemploTemplateColumn{
+                margin: 0 3rem;
+                display: grid;
+                grid-template-columns: [Columna1] 2fr [Columna2] 1fr [Columna3]1fr [columna4] 1fr;
+                border-bottom:1px black solid;
+                border-right: 1px black solid;
+            }
+            #ejemploTemplateColumn> div{
+                border-top:1px black solid;
+                border-left: 1px black solid;
+            }
+        </style>
+        <div id="ejemploTemplateColumn">
+            <div>Celda1</div>
+            <div>Celda2</div>
+            <div>Celda3</div>
+            <div>Celda4</div>
+        </div>  
+        <p class="code">
+        &lt;style>
+            #ejemploTemplateColumn{
+                display: grid;
+                grid-template-columns: [Columna1] 2fr [Columna2] 1fr [Columna3]1fr [columna4] 1fr;
+                border-bottom:1px black solid;
+                border-right: 1px black solid;
+            }
+            #ejemploTemplateColumn> div{
+                border-top:1px black solid;
+                border-left: 1px black solid;
+            }
+        &lt;/style>
+        &lt;div id="ejemploTemplateColumn">
+            &lt;div>Celda1&lt;/div>
+            &lt;div>Celda2&lt;/div>
+            &lt;div>Celda3&lt;/div>
+            &lt;div>Celda4&lt;/div>
+        &lt;/div>
+        </p>
         <p>Si su definición contiene partes repetidas, puede usar la repeat() notación para simplificar las cosas:</p>
         <p class="code">grid-template-columns: repeat(3, 20px [col-start]);</p>
         <p>Que es equivalente a:</p>
@@ -401,6 +383,65 @@
             pueden tener varios nombres, como la línea del extremo izquierdo en el ejemplo anterior, que tendrá tres nombres:
             inicio de encabezado, inicio principal e inicio de pie de página.</p>
 
+    </article>
+    <h4>grid-template</h4>
+    <article>
+        <p>Es una abreviatura para establecer grid-template-rows, grid-template-columns y grid-template-areas en una sola
+            declaración.</p>
+        <p>Valores:</p>
+        <ul>
+            <li>none – establece las tres propiedades en sus valores iniciales(rows, columns and area).</li>
+            <li>[grid-template-rows] / [grid-template-columns] – establece grid-template-columns y grid-template-rows a
+                los valores especificados, respectivamente, y establece grid-template-areas entre comillas en la zona
+                del grid-template-rows
+            </li>
+        </ul>
+        <p>Ver como funciona cada una de las propiedades en particular: grig-template-columns, grid-template-rows y
+            grid-template-areas</p>
+        <p>Por ejemplo:</p>
+        <p class="code">
+            grid-template:
+            [row1-start] "header header header" 25px [row1-end]
+            [row2-start] "footer footer footer" 25px [row2-end]
+            / auto 100px auto;
+        </p>
+        <style>
+            #ejemplo1{
+                border-top:1px solid black;
+                border-right: 1px solid black;
+                margin-inline: 2rem;
+                display: grid;
+                grid-template:  [row1-start] "header header header" 25px [row1-end]
+                    [row2-start] "footer footer footer" 25px [row2-end]
+                    / auto 100px auto;
+            }
+            #ejemplo1>div{
+                box-sizing: border-box;
+                margin:0;
+                padding:0;
+                text-align: center;
+                border-bottom: 1px solid black;
+                border-left: 1px solid black;
+            }
+        </style>
+        <div id="ejemplo1">
+            <div>Header</div>
+            <div>Header</div>
+            <div>Header</div>
+            <div>Footer</div>
+            <div>Footer</div>
+            <div>Footer</div>
+        </div>
+        <p>Y equivale a:</p>
+        <p class="code">
+            grid-template-rows: [row1-start] 25px [row1-end row2-start] 25px [row2-end];
+            grid-template-columns: auto 100px auto;
+            grid-template-areas:
+            "header header header"
+            "footer footer footer";
+        </p>
+        <p>Si tienes problemas con bordes dobles en la intersecciones, un truco que a mi me funciona es dar un
+            border-top y border-right al contenedoer y un border-botton y border-left a los elementos contenidos.</p>
     </article>
     <h4>grid-column-gap & grid-row-gap</h4>
     <article>
@@ -576,7 +617,44 @@
     <h4>grid-auto-columns</h4>
     <h4>grid-auto-rows</h4>
     <h4>grid-auto-flow</h4>
+    <article>
+        <p>Si tiene elementos de cuadrícula que no coloca explícitamente en la cuadrícula, el algoritmo de colocación
+            automática se activa para colocar automáticamente los elementos. Esta propiedad controla cómo funciona el
+            algoritmo de colocación automática.</p>
+        <p>Los valores pueden ser: column, row y dense(realmente no comprendo bien su funcionamiento)</p>
+        <p>  La forma colocación de los elementos por defecto es row, es decir, primero empieza a colocar por las las filas, de izquierda a derecha, pasando
+            posteriormente a la siguiente fila. El modo column empieza a colocar de arriba a abajo empezando por la izquierda.
+        </p>
+
+        <p>Por ejemplo:</p>
+        <style>
+            #ejemplogridautoflow{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-rows:30px 60px;
+                grid-auto-flow: column;
+            }
+            #ejemplogridautoflow div{
+                border-radius: 5px;
+                background-color: violet;
+            }
+        </style>
+        <div id="ejemplogridautoflow">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </article>
     <h4>grid</h4>
+    <article>
+        <p>Una abreviatura para configurar todas las siguientes propiedades en una sola declaración:
+            grid-template-rows, grid-template-columns,  grid-template-areas,  grid-auto-rows,  grid-auto-columns y
+            grid-auto-flow (Nota: solo puede especificar las propiedades de cuadrícula explícitas o implícitas en una
+            sola declaración de cuadrícula).</p>
+    </article>
     <h3>Propiedades de las celdas</h3>
 </section>
 
