@@ -20,8 +20,8 @@
     box-sizing: content-box;
   }
   div.mySize{
-    width: 25vw;
-    height: 25vw;
+    width: 25%;
+    height: 150px;
     border:2vw solid gray;
     padding: 2vw;
 
@@ -29,14 +29,15 @@
   div.especial{
       box-sizing: border-box;
       border:1px solid black;
-      height: 25vw;
-      width: 2vw;
+      height: 150px;
+      width: 25%;
       padding:0;
   }
   .centrado{
       border:none;
-      margin:2em auto;
-      width: 33vw;
+        width: 100%;
+      margin: 0;
+      padding: 0;
   }
   .myCentrado{
       margin:2em auto;
@@ -66,6 +67,10 @@
   body{
       margin: 4em;
   }
+  .d-flex{
+      display: flex;
+      flex-wrap: wrap;
+  }
 
 </style>
 <body>
@@ -77,11 +82,10 @@ border:2vw solid gray;
 padding: 2vw;
 </p>
 <h2>Sin border-box</h2>
-<div class="sinBorderBox mySize myCentrado">Cuadro</div>
+<div class="sinBorderBox mySize">Cuadro</div>
 <h2>Con Border-box</h2>
-<div class="centrado">
+<div class="centrado d-flex">
     <div class="borderBox mySize">Cuadro</div>
-    <div class="especial"></div>
     <div class="especial"></div>
     <div class="especial"></div>
     <div class="especial"></div>
