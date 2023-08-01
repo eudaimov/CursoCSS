@@ -8,8 +8,150 @@
     <title>Imagenes</title>
     <link rel="icon" type="image/x-icon" href="/img/iconoCursoCSS.png">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .bordesRedondos{
+            display: block;
+            border-radius: 50%;
+            width: 200px;
+            aspect-ratio: 1/1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bordes{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            aspect-ratio: 1/1;
+            width: 200px;
+            border: 2px solid blueviolet;
+            border-radius: 50%;
+            padding: 0.5rem;
+        }
+        .bordes:hover{
+            border: 2px solid orangered;
+        }
+    </style>
 </head>
 <body>
+<h1>Imágenes</h1>
+<h2>Introducción</h2>
+<section>
+    <p>En esta sección vamos a ver todos los atributos que podemos emplear con los elementos de imágen (&lt;img &gt;)</p>
+</section>
+<h2>Atribuos</h2>
+<h3>border-radius</h3>
+<section>
+    <p>Para bordes redondeados.</p>
+    <img class="bordesRedondos" src="./img/brujula.webp" alt="Imagen bordes redondeados ejemplo">
+    <div class="code">
+        &lt;img class="bordesRedondos" src="./img/brujula.webp" alt="Imagen bordes redondeados ejemplo"&gt;
+        .bordesRedondos{
+            display: block;
+            border-radius: 50%;
+            width: 200px;
+            aspect-ratio: 1/1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </div>
+</section>
+<h3>border</h3>
+    <p>Para crear un borde, sobre todo en imágenes en miniatura.</p>
+    <img class="bordes" src="./img/brujula.webp" alt="Imagen bordes redondeados ejemplo">
+    <div class="code">
+        &lt;img class="bordes" src="./img/brujula.webp" alt="Imagen bordes redondeados ejemplo" &gt;
+        .bordes{
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            aspect-ratio: 1/1;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid blueviolet;
+            padding: 0.5rem;
+        }
+        .bordes:hover{
+            border: 2px solid orangered;
+        }
+    </div>
+
+<h3>box-shadow</h3>
+    <section>
+        <p>Para realizar una sombra alrededor de una imágen.</p>
+    </section>
+<h3>max-width </h3>
+    <section>
+        <p>Para cambiar el tamaño dinámicamente dependiendo el tamaño de la ventana.</p>
+    </section>
+<h3>margin-let:auto;  margin-right:auto</h3>
+<section>
+    <p>Para centrar una imagen.</p>
+</section>
+<h3>opacity</h3>
+<section>
+    <p>Para modificar la opacidad de la imagen.</p>
+</section>
+<h3>filter</h3>
+<section>
+    <p>Para colocar un filtro a nuestra imagen.</p>
+</section>
+<h3>  transform: scaleX(-1)</h3>
+<section>
+    <p>Para voltear una imagen.</p>
+</section>
+<h3>box-reflect: below, above, lefto right. (-webkit-box-reflect:)</h3>
+<section>
+    <p>Para reflejar una imagen.</p>
+</section>
+<h3>object-fit</h3>
+<section>
+    <p>Es yba propiedad CSS se usa para especificar cómo se debe cambiar el tamaño de un &lt;img&gt; o &lt;video&gt; para que se ajuste a su contenedor.</p>
+    <p>Si diseñamos la imagen  para que tenga la mitad de su ancho y la misma altura, la imagen se verá deformada y aplastada por los lados. Para evitar que
+    suceda esto debemos aplicar la propiedad object-fit.
+    </p>
+    <p>Las diferentes opciones son:</p>
+    <ul>
+        <li>fill. Es la opción por defecto, la imagen se deformará para adaptase a las dimensiones del elemento contenedor.</li>
+        <li>contain: La imagen reducirá su tamaño, pero conservará su relación entre el ancho y alto para adaptarse al tamaño del contenedor</li>
+        <li>cover.  La imagen se recortará o ampliará para cubrir las dimensiones del contenedor sin modificar en ningún caso la relación entre el ancho y el alto.</li>
+        <li>none: La imagen se recortará a las dimensiones del contenedor no modificando su tamaño. Si la imagen tiene
+                mayor tamaño que el contenedor tendrá el mismo efecto que cover.</li>
+        <li>scale-down. La imagen se reduce a la versión más pequeña de "none" o "contain"</li>
+    </ul>
+</section>
+<h3>object-position</h3>
+<section>
+    <p>La propiedad CSS se usa para especificar cómo se debe colocar un &lt;img> o un &lt;video> dentro de su contenedor.</p>
+    <p>Se usa junto con object-fit para especificar cómo se debe colocar un elemento (img, video) con las coordenadas x/y
+        dentro de su "propio cuadro de contenido".</p>
+</section>
+<h3>offset</h3>
+<section>
+    <p>La propiedad se usa cuando se anima un elemento a lo largo de una ruta y es una propiedad abreviada para las siguientes propiedades:
+    </p>
+    <ul>
+        <li>
+            offset-anchor*(Sólo Firefox)
+        </li>
+        <li>
+            offset-distance
+        </li>
+        <li>
+            offset-path
+        </li>
+        <li>
+            offset-rotate
+        </li>
+    </ul>
+</section>
+<h3>outline</h3>
+<section>
+    <p>Borde sin afectar al ancho y alto del elemento</p>
+</section>
+<h3>mask-image</h3>
+<section>
+    <p> Crea una capa de máscara para colocar sobre un elemento para ocultar parcial o totalmente partes del elemento.</p>
+</section>
 
 </body>
 </html>
