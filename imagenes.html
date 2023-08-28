@@ -152,6 +152,23 @@
 <section>
     <p> Crea una capa de máscara para colocar sobre un elemento para ocultar parcial o totalmente partes del elemento.</p>
 </section>
+<h3>aspect-ratio</h3>
+<section>
+    <p>Permite definir la relación ancho-alto deseada del cuadro de un elemento. Esto significa que incluso si el contenedor
+        principal o el tamaño de la ventana gráfica cambian, el navegador ajustará las dimensiones del elemento para
+        mantener la relación ancho-alto especificada. La relación de aspecto especificada se utiliza en el cálculo de
+        tamaños automáticos y algunas otras funciones de diseño.aspect-ratio
+    </p>
+    <p>Al menos uno de los tamaños de la caja debe ser automático para que aspect-ratiotenga algún efecto. Si ni el
+        ancho ni el alto son un tamaño automático, entonces la relación de aspecto proporcionada no tiene ningún efecto
+        en los tamaños preferidos del cuadro.</p>
+    <p>Si tiene un elemento con una relación de aspecto y el contenido es tan largo que obliga al elemento a expandirse,
+        entonces el elemento se expandirá. Y si el elemento se expande, sus dimensiones cambian y, por lo tanto,
+        no habrá más relación de aspecto. Es por eso que la especificación dice que la propiedad establece la relación
+        de aspecto "preferida". Se prefiere, pero no se prescribe.</p>
+    <p>¿No te gusta cómo funciona? La configuración min-height: 0;del elemento permitirá que el contenido desborde la
+        relación de aspecto preferida en lugar de expandirla.</p>
+</section>
 
 </body>
 </html>
