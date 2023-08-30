@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="./img/iconoCursoCSS.png">
+    <title>Curso CSS / Bordes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<h1>Bordes: Border / Outline</h1>
+
+<section>
+    <p>Existen dos tipos de bordes el interior(border) y el exterior(outline)</p>
+</section>
+<section>
+    <p>Las propiedades del borde CSS le permiten especificar el estilo, ancho y color del borde de un elemento. Depende de
+        la propiedad box-sizing para que la anchura y altura del elemento dependa o no de esta propiedad.</p>
+    <p>La propiedad border es una propiedad abreviada para las siguientes propiedades de borde individuales:</p>
+    <ul>
+        <li>border-width</li>
+        <li>border-style(requerido)</li>
+        <li>border-color</li>
+    </ul>
+
+</section>
+<h2>Border</h2>
+<h2>Outline</h2>
+<section>
+    <p>Es una linea exterior que rodea el elemento y que no se tiene en cuenta a la hora de calcular altura y anchura,
+        es decir, no forma parte de las dimensiones del elemento. Eso quiere decir que se va a suponer a otro contenido.</p>
+    <p>Se utiliza para destacar el elemento.</p>
+    <p>Se compone de las siguientes propiedades:</p>
+    <ul>
+        <li>outline-style: Especifica el estilo del contorno</li>
+        <li>outline-color: Se utiliza para establecer el color del contorno.</li>
+        <li>outline-width: Se utiliza para determinar "el ancho" del contorno.</li>
+        <li>outline-offset: Se utiliza para agregar un espacio entre un contorno y el borde/borde de un elemento.
+            El espacio entre un elemento y su contorno es transparente.</li>
+    </ul>
+    <p>Se puede utilizar como un conjunto de las propiedades style, width y color. La única imprescindible es style.</p>
+
+    <h3>outline-style</h3>
+    <p>La propiedad especifica el estilo del contorno y puede tener uno de los siguientes valores:</p>
+    <ul>
+        <li>dotted- Define un contorno de puntos</li>
+        <li>dashed- Define un contorno discontinuo</li>
+        <li>solid- Define un contorno sólido</li>
+        <li>double- Define un doble contorno.</li>
+        <li>groove- Define un contorno ranurado 3D</li>
+        <li>ridge- Define un contorno estriado 3D</li>
+        <li>inset- Define un contorno insertado en 3D</li>
+        <li>outset- Define un esquema de inicio en 3D.</li>
+        <li>none- No define ningún contorno</li>
+        <li>hidden- Define un contorno oculto</li>
+    </ul>
+    <p> Ninguna de las otras propiedades del esquema (sobre las cuales aprenderá más en los próximos capítulos)
+         tendrá NINGÚN efecto a menos que la propiedad outline-style esté configurada.</p>
+    <h3>outline-width</h3>
+    <p>Define el ancho del borde, ademas de determinarse mediante multitud de unidades como pt, px, em, rem, etc. Puede
+    tener los siguientes valores:</p>
+    <ul>
+        <li>thin (normalmente 1px)</li>
+        <li>medium (normalmente 3px)</li>
+        <li>thick (normalmente 5px)</li>
+    </ul>
+    <h3>outline-color</h3>
+    <p>Se utiliza para establecer el color y existen diversas maneras de determinar el color:</p>
+    <ul>
+        <li>nombre: especifique un nombre de color, como "rojo"</li>
+        <li>HEX: especifique un valor hexadecimal, como "#ff0000"</li>
+        <li>RGB: especifique un valor RGB, como "rgb(255,0,0)"</li>
+        <li>HSL: especifique un valor HSL, como "hsl(0, 100%, 50%)"</li>
+        <li>invert: realiza una inversión de color (lo que garantiza que el contorno sea visible, independientemente del color de fondo)*</li>
+    </ul>
+    <p>* Según pruebas realizadas invert, realmente coge el color que se le da al texto interior del elemento.</p>
+    <h3>outline-offset</h3>
+    <p> Agrega espacio entre un contorno y el borde/borde de un elemento. El espacio entre un elemento y su contorno es transparente.</p>
+
+</section>
+
+</body>
+</html>
