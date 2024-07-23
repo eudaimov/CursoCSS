@@ -1,98 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="icon" type="image/x-icon" href="./img/iconoCursoCSS.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>¿Dónde encontrarlo o situarlo?</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css" />
-</head>
-
-<body>
-    <h1>¿Dónde encontrarlo o situarlo?</h1>
-    <p>Existe tres formas de aplicar nuestro cógido css.</p>
-    <ul>
-        <li>CSS externo.</li>
-        <li>CSS interno.</li>
-        <li>CSS en linea.</li>
-    </ul>
-    <h2>Orden de prioridad</h2>
-    <p>
-        Si se han definido algunas propiedades repetidas para el mismo elemento
-        en diferentes hojas de estilo, se utilizará el valor de la última hoja de estilo leída.
-    </p>
-    <p>Ademas hay que tener en cuenta lo siguiente:</p>
-    <p>Todos los estilos en una página "caerán en cascada" en una nueva hoja de estilo "virtual" según las siguientes
-        reglas, donde el
-        número uno tiene la prioridad más alta:
-    </p>
-    <ol>
-        <li>
-            Estilo en línea (dentro de un elemento HTML)
-        </li>
-        <li>
-            Hojas de estilo externas e internas (en la sección de cabecera)
-        </li>
-        <li>
-            Predeterminado del navegador.
-        </li>
-    </ol>
-    <p>
-        Por lo tanto, un estilo en línea tiene la prioridad más alta y anulará los estilos externos e internos y los
-        valores predeterminados del navegador.</p>
-    <p>Dentro del mismo nivel también existe un orden de prioridad</p>
-    <ol>
-        <li>Elementos</li>
-        <li>Clases</li>
-        <li>Identificadores</li>
-        <li>!important</li>
-    </ol>
-    <h2>CSS externo</h2>
-    <p>
-        El código css se escribe en un archivo externo a nuestro archivo html, la
-        extensión de dicho archivo debe ser css y la vinculación se realiza dentro
-        del elemento head mediante el elemento link
-    </p>
-    <p class="code">
-        &lt;link rel="stylesheet" href="css/style.css" type="text/css"&gt;
-    </p>
-    <p>
-        El atributo type especifica el tipo de medio del documento/recurso
-        vinculado.
-    </p>
-    <p>
-        El valor más común de tipo es "text/css". Si omite el atributo type, el
-        navegador buscará en el rel atributo para adivinar el tipo correcto.
-        Entonces, si rel="hoja de estilo", el navegador asumirá que el tipo es
-        "texto/css"
-    </p>
-    <h2>CSS interno</h2>
-    <section>
-        <p>Se encuentra dentro del archivo html, pero dentro del <strong>elemento style</strong> y este a su vez dentro del elemento head
-        </p>
-        <p class="code">
-            &lt;style>
-                p{
-                    font-size:20pt;
-                }
-            &lt;/style>
-        </p>
-    </section>
-    <h2>CSS en linea</h2>
-    <p>Se puede encontrar a lo largo de todo en código html, formando parte del <strong>atributo style</strong> que puede ir en
-        cualquiera de los elementos que nos puede aparecen en un body.
-    </p>
-    <p>
-        Su uso está <strong>desaconsejado</strong> y solamente recomendado para hacer pruebas de maquetación o evitar la aplicación de
-        estilos globales que se usan desde otro lugar, aunque seguramente se puedan hacer en otro lugar que no sea este.
-    </p>
-    <p class="code">
-        &lt;p style="color:red&gt;
-            Hola mundo
-        &lt;/p&gt;
-    </p>
-</body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<link rel="icon" type="image/x-icon" href="./img/iconoCursoCSS.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>¿Dónde encontrarlo o situarlo?</title>
+		<link rel="stylesheet" href="css/style.css" type="text/css"/>
+	</head>
+	<body>
+		<h1>¿Dónde encontrarlo o situarlo?</h1>
+		<p>Existe tres formas de aplicar nuestro cógido css.</p>
+		<ul>
+			<li>CSS externo.</li>
+			<li>CSS interno.</li>
+			<li>CSS en linea.</li>
+		</ul>
+		<h2>Orden de prioridad</h2>
+		<p>
+			Si se han definido algunas propiedades repetidas para el mismo elemento
+			en diferentes hojas de estilo, se utilizará el valor de la última hoja de estilo leída.
+		</p>
+		<p>Ademas hay que tener en cuenta lo siguiente:</p>
+		<p>Todos los estilos en una página "caerán en cascada" en una nueva hoja de estilo "virtual" según las
+			siguientes
+			reglas, donde el
+			número uno tiene la prioridad más alta:
+		</p>
+		<ol>
+			<li>
+				Estilo en línea (dentro de un elemento HTML)
+			</li>
+			<li>
+				Hojas de estilo externas e internas (en la sección de cabecera)
+			</li>
+			<li>
+				Predeterminado del navegador.
+			</li>
+		</ol>
+		<p>Por lo tanto, un estilo en línea tiene la prioridad más alta y anulará los estilos externos e internos y los
+			valores predeterminados del navegador.
+		</p>
+		<p>Dentro del mismo nivel también existe un orden de prioridad</p>
+		<ol>
+			<li>Elementos</li>
+			<li>Clases</li>
+			<li>Identificadores</li>
+			<li>!important</li>
+		</ol>
+		<h2>CSS externo</h2>
+		<p>
+			El código css se escribe en un archivo externo a nuestro archivo html, la
+			extensión de dicho archivo debe ser css y la vinculación se realiza dentro
+			del elemento head mediante el elemento link
+		</p>
+		<p class="code">
+			&lt;link rel="stylesheet" href="css/style.css" type="text/css"&gt;
+		</p>
+		<p>
+			El atributo type especifica el tipo de medio del documento/recurso
+			vinculado.
+		</p>
+		<p>
+			El valor más común de tipo es "text/css". Si omite el atributo type, el
+			navegador buscará en el rel atributo para adivinar el tipo correcto.
+			Entonces, si rel="hoja de estilo", el navegador asumirá que el tipo es
+			"texto/css"
+		</p>
+		<h2>CSS interno</h2>
+		<section>
+			<p>Se encuentra dentro del archivo html, pero dentro del <strong>elemento style</strong> y este a su vez
+				dentro del
+				elemento head
+			</p>
+			<p class="code">
+				&lt;style>
+				p{
+				font-size:20pt;
+				}
+				&lt;/style>
+			</p>
+		</section>
+		<h2>CSS en linea</h2>
+		<p>Se puede encontrar a lo largo de todo en código html, formando parte del <strong>atributo style</strong> que
+			puede ir
+			en
+			cualquiera de los elementos que nos puede aparecen en un body.
+		</p>
+		<p>
+			Su uso está <strong>desaconsejado </strong> y solamente recomendado para hacer pruebas de maquetación o
+			evitar la
+			aplicación de
+			estilos globales que se usan desde otro lugar, aunque seguramente se puedan hacer en otro lugar que no sea
+			este.
+		</p>
+		<p class="code">
+			&lt;p style="color:red&gt;
+			Hola mundo
+			&lt;/p&gt;
+		</p>
+	</body>
 
 </html>

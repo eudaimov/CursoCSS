@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>CSS Nesting</title>
+		<link rel="icon" type="image/x-icon" href="./img/iconoCursoCSS.png">
+		<link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<h1>CSS Anidado o Nesting</h1>
+		<p>El módulo de anidación CSS define una sintaxis para anidar selectores, proporcionando la capacidad de anidar
+			una regla de estilo dentro de otra, con el selector de la regla secundaria en relación con el selector de la
+			regla principal.
+		</p>
+		<p>La anidación de CSS se diferencia de los preprocesadores de CSS como Sass en que es analizada por el
+			navegador en lugar de ser precompilada por un preprocesador de CSS.
+		</p>
+		<p>La anidación de CSS mejora la legibilidad, la modularidad y la facilidad de mantenimiento de las hojas de
+			estilo CSS. También ayuda a reducir potencialmente el tamaño de los archivos CSS, lo que disminuye la
+			cantidad de datos que descargan los usuarios.
+		</p>
+
+		<h2>Selectores Hijos:(Sin selector de anidamiento &)</h2>
+		<p>Puedes crear selectores hijos de un elemento padre, que a su vez se utilizan para apuntar a elementos
+			secundarios específicos.
+		</p>
+		<p>Ejemplo sin el selector de anidamiento &:</p>
+		<p class="code">
+			parent { /* Estilos para el elemento padre */
+				child { /* Estilos para el hijo del elemento padre */ }
+			}
+		</p>
+		<p>Existe también la posibilidad de utilizar el selector de anidamiento &, este se suele utilizar de manera
+			imperativa cuando se utiliza pseudo selector que afectan al padre o selectores combinados. También se puede
+			utilizar en el caso que no se utilicen este tipo de selectores pero existen una ligera diferencia que
+			explicaremos posteriormente.
+		</p>
+		<p>Por ejemplo:</p>
+		<p class="code">
+			parent { /* Estilos para el elemento padre */
+				&:hover { /* Estilos para el hijo del elemento padre */ }
+			}
+		</p>
+		<h2>Diferencias entre utilizar & y no utilizarlo:</h2>
+		<p>El selector & input se refiere al elemento &lt;input> que está directamente anidado dentro de una etiqueta
+			&lt;label>. Es decir, solo se aplicará a los elementos &lt;input> que sean hijos inmediatos de una etiqueta
+			&lt;label>.
+		</p>
+		<p>Sino utilizamos el selector de anidamiento &, simplemente estamos seleccionando todos los elementos &lt;input>
+			dentro de una etiqueta &lt;label>, sin importar su nivel de anidamiento. Esto incluirá todos los elementos
+				&lt;input> dentro de la etiqueta &lt;label>, independientemente de si son hijos directos o nietos, etc
+		</p>
+		<p>En resumen, el uso de & permite una selección más específica y controlada de los elementos anidados.</p>
+
+		<h2>Anidamiento en ancestro</h2>
+		<p>En algunos casos, es posible que se quiera hacer referencia a un elemento dependiendo de los ancestros
+			(padres, abuelos, etc...) que tenga un cierto elemento. Esto permitiría flexibilizar la forma de anidar
+			selectores en nuestro código y hacerlo mucho más potente aún.
+		</p>
+		<p>Por ejemplo, podemos utilizar el siguiente código para hacer referencia a cualquier mención del padre de
+			primer nivel:
+		</p>
+		<p class="code">
+		.item {
+			background: grey;
+			.container & {
+				background: green;
+			}
+		}</p>
+		<p>Esto nos permitirá indicar al navegador que queremos dar estilo al elemento .item siempre y cuando tengan un
+			ancestro con clase .container. Así podremos organizar grupos de código CSS donde aparezca cualquier mención
+			a un determinado elemento.
+		</p>
+		<p>El código equivalente en CSS nativo sería el siguiente:</p>
+		<p class="code">
+		.item {
+			background: grey;
+		}
+		.container .item {
+			background: green;
+		}
+		</p>
+
+
+	</body>
+</html>
