@@ -45,15 +45,25 @@
 			}
 		</p>
 		<h2>Diferencias entre utilizar & y no utilizarlo:</h2>
-		<p>El selector & input se refiere al elemento &lt;input> que está directamente anidado dentro de una etiqueta
-			&lt;label>. Es decir, solo se aplicará a los elementos &lt;input> que sean hijos inmediatos de una etiqueta
-			&lt;label>.
+		<p>La única diferencia actual(buscar versiones anteriores a 2023) es poder utilizar pseudo-selectores con el
+		   ancestro inmediato</p>
+		<p class="code">
+			p{
+				color:gray;
+				&:hover a{
+					text-decoration:over
+				}
+			}
 		</p>
-		<p>Sino utilizamos el selector de anidamiento &, simplemente estamos seleccionando todos los elementos &lt;input>
-			dentro de una etiqueta &lt;label>, sin importar su nivel de anidamiento. Esto incluirá todos los elementos
-				&lt;input> dentro de la etiqueta &lt;label>, independientemente de si son hijos directos o nietos, etc
+		<p>Esto no funciona:</p>
+		<p class="code">
+			p{
+				color:gray;
+				:hover a{
+					text-decoration:over
+				}
+			}
 		</p>
-		<p>En resumen, el uso de & permite una selección más específica y controlada de los elementos anidados.</p>
 
 		<h2>Anidamiento en ancestro</h2>
 		<p>En algunos casos, es posible que se quiera hacer referencia a un elemento dependiendo de los ancestros
